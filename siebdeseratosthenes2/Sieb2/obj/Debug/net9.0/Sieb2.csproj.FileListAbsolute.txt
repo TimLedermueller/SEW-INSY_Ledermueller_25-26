@@ -1,0 +1,14 @@
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\siebdeseratosthenes2\Sieb2\bin\Debug\net9.0\Sieb2.exe
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\siebdeseratosthenes2\Sieb2\bin\Debug\net9.0\Sieb2.deps.json
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\siebdeseratosthenes2\Sieb2\bin\Debug\net9.0\Sieb2.runtimeconfig.json
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\siebdeseratosthenes2\Sieb2\bin\Debug\net9.0\Sieb2.dll
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\siebdeseratosthenes2\Sieb2\bin\Debug\net9.0\Sieb2.pdb
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\siebdeseratosthenes2\Sieb2\obj\Debug\net9.0\Sieb2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\siebdeseratosthenes2\Sieb2\obj\Debug\net9.0\Sieb2.AssemblyInfoInputs.cache
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\siebdeseratosthenes2\Sieb2\obj\Debug\net9.0\Sieb2.AssemblyInfo.cs
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\siebdeseratosthenes2\Sieb2\obj\Debug\net9.0\Sieb2.csproj.CoreCompileInputs.cache
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\siebdeseratosthenes2\Sieb2\obj\Debug\net9.0\Sieb2.dll
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\siebdeseratosthenes2\Sieb2\obj\Debug\net9.0\refint\Sieb2.dll
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\siebdeseratosthenes2\Sieb2\obj\Debug\net9.0\Sieb2.pdb
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\siebdeseratosthenes2\Sieb2\obj\Debug\net9.0\Sieb2.genruntimeconfig.cache
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\siebdeseratosthenes2\Sieb2\obj\Debug\net9.0\ref\Sieb2.dll

@@ -1,0 +1,4 @@
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\bsp\bsp\obj\Debug\net9.0\bsp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\bsp\bsp\obj\Debug\net9.0\bsp.AssemblyInfoInputs.cache
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\bsp\bsp\obj\Debug\net9.0\bsp.AssemblyInfo.cs
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\bsp\bsp\obj\Debug\net9.0\bsp.csproj.CoreCompileInputs.cache

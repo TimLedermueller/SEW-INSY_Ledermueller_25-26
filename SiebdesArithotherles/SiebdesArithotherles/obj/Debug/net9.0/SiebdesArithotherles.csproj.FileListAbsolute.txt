@@ -1,0 +1,14 @@
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\SiebdesArithotherles\SiebdesArithotherles\bin\Debug\net9.0\SiebdesArithotherles.exe
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\SiebdesArithotherles\SiebdesArithotherles\bin\Debug\net9.0\SiebdesArithotherles.deps.json
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\SiebdesArithotherles\SiebdesArithotherles\bin\Debug\net9.0\SiebdesArithotherles.runtimeconfig.json
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\SiebdesArithotherles\SiebdesArithotherles\bin\Debug\net9.0\SiebdesArithotherles.dll
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\SiebdesArithotherles\SiebdesArithotherles\bin\Debug\net9.0\SiebdesArithotherles.pdb
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\SiebdesArithotherles\SiebdesArithotherles\obj\Debug\net9.0\SiebdesArithotherles.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\SiebdesArithotherles\SiebdesArithotherles\obj\Debug\net9.0\SiebdesArithotherles.AssemblyInfoInputs.cache
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\SiebdesArithotherles\SiebdesArithotherles\obj\Debug\net9.0\SiebdesArithotherles.AssemblyInfo.cs
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\SiebdesArithotherles\SiebdesArithotherles\obj\Debug\net9.0\SiebdesArithotherles.csproj.CoreCompileInputs.cache
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\SiebdesArithotherles\SiebdesArithotherles\obj\Debug\net9.0\SiebdesArithotherles.dll
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\SiebdesArithotherles\SiebdesArithotherles\obj\Debug\net9.0\refint\SiebdesArithotherles.dll
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\SiebdesArithotherles\SiebdesArithotherles\obj\Debug\net9.0\SiebdesArithotherles.pdb
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\SiebdesArithotherles\SiebdesArithotherles\obj\Debug\net9.0\SiebdesArithotherles.genruntimeconfig.cache
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\SiebdesArithotherles\SiebdesArithotherles\obj\Debug\net9.0\ref\SiebdesArithotherles.dll
