@@ -1,0 +1,15 @@
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\ParallelProgramming\bin\Debug\net9.0\ParallelProgramming.exe
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\ParallelProgramming\bin\Debug\net9.0\ParallelProgramming.deps.json
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\ParallelProgramming\bin\Debug\net9.0\ParallelProgramming.runtimeconfig.json
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\ParallelProgramming\bin\Debug\net9.0\ParallelProgramming.dll
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\ParallelProgramming\bin\Debug\net9.0\ParallelProgramming.pdb
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\ParallelProgramming\obj\Debug\net9.0\ParallelProgramming.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\ParallelProgramming\obj\Debug\net9.0\ParallelProgramming.AssemblyInfoInputs.cache
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\ParallelProgramming\obj\Debug\net9.0\ParallelProgramming.AssemblyInfo.cs
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\ParallelProgramming\obj\Debug\net9.0\ParallelProgramming.csproj.CoreCompileInputs.cache
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\ParallelProgramming\obj\Debug\net9.0\ParallelProgramming.sourcelink.json
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\ParallelProgramming\obj\Debug\net9.0\ParallelProgramming.dll
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\ParallelProgramming\obj\Debug\net9.0\refint\ParallelProgramming.dll
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\ParallelProgramming\obj\Debug\net9.0\ParallelProgramming.pdb
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\ParallelProgramming\obj\Debug\net9.0\ParallelProgramming.genruntimeconfig.cache
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\ParallelProgramming\obj\Debug\net9.0\ref\ParallelProgramming.dll

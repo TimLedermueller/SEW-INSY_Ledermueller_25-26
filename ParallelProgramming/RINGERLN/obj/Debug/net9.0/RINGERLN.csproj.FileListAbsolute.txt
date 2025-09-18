@@ -1,0 +1,15 @@
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\RINGERLN\obj\Debug\net9.0\RINGERLN.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\RINGERLN\obj\Debug\net9.0\RINGERLN.AssemblyInfoInputs.cache
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\RINGERLN\obj\Debug\net9.0\RINGERLN.AssemblyInfo.cs
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\RINGERLN\obj\Debug\net9.0\RINGERLN.csproj.CoreCompileInputs.cache
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\RINGERLN\obj\Debug\net9.0\RINGERLN.sourcelink.json
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\RINGERLN\bin\Debug\net9.0\RINGERLN.exe
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\RINGERLN\bin\Debug\net9.0\RINGERLN.deps.json
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\RINGERLN\bin\Debug\net9.0\RINGERLN.runtimeconfig.json
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\RINGERLN\bin\Debug\net9.0\RINGERLN.dll
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\RINGERLN\bin\Debug\net9.0\RINGERLN.pdb
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\RINGERLN\obj\Debug\net9.0\RINGERLN.dll
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\RINGERLN\obj\Debug\net9.0\refint\RINGERLN.dll
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\RINGERLN\obj\Debug\net9.0\RINGERLN.pdb
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\RINGERLN\obj\Debug\net9.0\RINGERLN.genruntimeconfig.cache
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\RINGERLN\obj\Debug\net9.0\ref\RINGERLN.dll

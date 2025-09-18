@@ -1,0 +1,15 @@
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\siebdeseratosthenes2\Sieb3\bin\Debug\net9.0\Sieb3.exe
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\siebdeseratosthenes2\Sieb3\bin\Debug\net9.0\Sieb3.deps.json
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\siebdeseratosthenes2\Sieb3\bin\Debug\net9.0\Sieb3.runtimeconfig.json
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\siebdeseratosthenes2\Sieb3\bin\Debug\net9.0\Sieb3.dll
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\siebdeseratosthenes2\Sieb3\bin\Debug\net9.0\Sieb3.pdb
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\siebdeseratosthenes2\Sieb3\obj\Debug\net9.0\Sieb3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\siebdeseratosthenes2\Sieb3\obj\Debug\net9.0\Sieb3.AssemblyInfoInputs.cache
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\siebdeseratosthenes2\Sieb3\obj\Debug\net9.0\Sieb3.AssemblyInfo.cs
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\siebdeseratosthenes2\Sieb3\obj\Debug\net9.0\Sieb3.csproj.CoreCompileInputs.cache
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\siebdeseratosthenes2\Sieb3\obj\Debug\net9.0\Sieb3.sourcelink.json
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\siebdeseratosthenes2\Sieb3\obj\Debug\net9.0\Sieb3.dll
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\siebdeseratosthenes2\Sieb3\obj\Debug\net9.0\refint\Sieb3.dll
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\siebdeseratosthenes2\Sieb3\obj\Debug\net9.0\Sieb3.pdb
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\siebdeseratosthenes2\Sieb3\obj\Debug\net9.0\Sieb3.genruntimeconfig.cache
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\siebdeseratosthenes2\Sieb3\obj\Debug\net9.0\ref\Sieb3.dll

@@ -1,0 +1,15 @@
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\Semaphore\bin\Debug\net9.0\Semaphore.exe
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\Semaphore\bin\Debug\net9.0\Semaphore.deps.json
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\Semaphore\bin\Debug\net9.0\Semaphore.runtimeconfig.json
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\Semaphore\bin\Debug\net9.0\Semaphore.dll
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\Semaphore\bin\Debug\net9.0\Semaphore.pdb
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\Semaphore\obj\Debug\net9.0\Semaphore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\Semaphore\obj\Debug\net9.0\Semaphore.AssemblyInfoInputs.cache
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\Semaphore\obj\Debug\net9.0\Semaphore.AssemblyInfo.cs
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\Semaphore\obj\Debug\net9.0\Semaphore.csproj.CoreCompileInputs.cache
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\Semaphore\obj\Debug\net9.0\Semaphore.sourcelink.json
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\Semaphore\obj\Debug\net9.0\Semaphore.dll
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\Semaphore\obj\Debug\net9.0\refint\Semaphore.dll
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\Semaphore\obj\Debug\net9.0\Semaphore.pdb
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\Semaphore\obj\Debug\net9.0\Semaphore.genruntimeconfig.cache
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\Semaphore\obj\Debug\net9.0\ref\Semaphore.dll

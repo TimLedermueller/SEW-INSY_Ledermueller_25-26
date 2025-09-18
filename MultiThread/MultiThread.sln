@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csv-generator", "csv-generator\csv-generator.csproj", "{50584D23-F04E-4CCD-B0D1-306BA3F77CD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "db-search", "db-search\db-search.csproj", "{6CCD86B8-684F-4C16-90DB-9FBD9855CA75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "searchNu", "searchNu\searchNu.csproj", "{89984712-0A1D-4F64-BDE1-8EA0A08BB7D7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50584D23-F04E-4CCD-B0D1-306BA3F77CD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50584D23-F04E-4CCD-B0D1-306BA3F77CD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50584D23-F04E-4CCD-B0D1-306BA3F77CD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50584D23-F04E-4CCD-B0D1-306BA3F77CD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CCD86B8-684F-4C16-90DB-9FBD9855CA75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CCD86B8-684F-4C16-90DB-9FBD9855CA75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CCD86B8-684F-4C16-90DB-9FBD9855CA75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CCD86B8-684F-4C16-90DB-9FBD9855CA75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89984712-0A1D-4F64-BDE1-8EA0A08BB7D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89984712-0A1D-4F64-BDE1-8EA0A08BB7D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89984712-0A1D-4F64-BDE1-8EA0A08BB7D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89984712-0A1D-4F64-BDE1-8EA0A08BB7D7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

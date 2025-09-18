@@ -1,0 +1,15 @@
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\ProducerConsumer\bin\Debug\net9.0\ProducerConsumer.exe
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\ProducerConsumer\bin\Debug\net9.0\ProducerConsumer.deps.json
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\ProducerConsumer\bin\Debug\net9.0\ProducerConsumer.runtimeconfig.json
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\ProducerConsumer\bin\Debug\net9.0\ProducerConsumer.dll
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\ProducerConsumer\bin\Debug\net9.0\ProducerConsumer.pdb
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\ProducerConsumer\obj\Debug\net9.0\ProducerConsumer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\ProducerConsumer\obj\Debug\net9.0\ProducerConsumer.AssemblyInfoInputs.cache
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\ProducerConsumer\obj\Debug\net9.0\ProducerConsumer.AssemblyInfo.cs
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\ProducerConsumer\obj\Debug\net9.0\ProducerConsumer.csproj.CoreCompileInputs.cache
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\ProducerConsumer\obj\Debug\net9.0\ProducerConsumer.sourcelink.json
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\ProducerConsumer\obj\Debug\net9.0\ProducerConsumer.dll
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\ProducerConsumer\obj\Debug\net9.0\refint\ProducerConsumer.dll
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\ProducerConsumer\obj\Debug\net9.0\ProducerConsumer.pdb
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\ProducerConsumer\obj\Debug\net9.0\ProducerConsumer.genruntimeconfig.cache
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\ProducerConsumer\obj\Debug\net9.0\ref\ProducerConsumer.dll
