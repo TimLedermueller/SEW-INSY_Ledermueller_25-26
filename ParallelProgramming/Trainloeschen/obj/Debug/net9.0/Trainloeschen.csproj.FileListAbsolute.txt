@@ -1,0 +1,15 @@
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\Trainloeschen\bin\Debug\net9.0\Trainloeschen.exe
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\Trainloeschen\bin\Debug\net9.0\Trainloeschen.deps.json
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\Trainloeschen\bin\Debug\net9.0\Trainloeschen.runtimeconfig.json
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\Trainloeschen\bin\Debug\net9.0\Trainloeschen.dll
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\Trainloeschen\bin\Debug\net9.0\Trainloeschen.pdb
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\Trainloeschen\obj\Debug\net9.0\Trainloeschen.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\Trainloeschen\obj\Debug\net9.0\Trainloeschen.AssemblyInfoInputs.cache
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\Trainloeschen\obj\Debug\net9.0\Trainloeschen.AssemblyInfo.cs
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\Trainloeschen\obj\Debug\net9.0\Trainloeschen.csproj.CoreCompileInputs.cache
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\Trainloeschen\obj\Debug\net9.0\Trainloeschen.sourcelink.json
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\Trainloeschen\obj\Debug\net9.0\Trainloeschen.dll
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\Trainloeschen\obj\Debug\net9.0\refint\Trainloeschen.dll
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\Trainloeschen\obj\Debug\net9.0\Trainloeschen.pdb
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\Trainloeschen\obj\Debug\net9.0\Trainloeschen.genruntimeconfig.cache
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\Trainloeschen\obj\Debug\net9.0\ref\Trainloeschen.dll

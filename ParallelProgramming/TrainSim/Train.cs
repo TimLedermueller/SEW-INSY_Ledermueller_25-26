@@ -2,22 +2,17 @@
 
 public class Train
 {
-    public int Position;
-    public int Length;
+        public int Position { get; private set; }
+        public int Length { get; }
 
-    public Train(int length)
-    {
-        Length = length;
-        Position = -length;
-    }
+        public Train(int length)
+        {
+            Length = length;
+            Position = -length; // startet links außerhalb
+        }
 
-    public void Step()
-    {
-        Position++;
-    }
-
-    public bool IsOutOfTrack(int trackLength)
-    {
-        return Position - Length > trackLength;
-    }
+        public void Step()
+        {
+            Position++;
+        }
 }

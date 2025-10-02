@@ -1,0 +1,15 @@
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\TrainSim\bin\Debug\net9.0\TrainSim.exe
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\TrainSim\bin\Debug\net9.0\TrainSim.deps.json
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\TrainSim\bin\Debug\net9.0\TrainSim.runtimeconfig.json
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\TrainSim\bin\Debug\net9.0\TrainSim.dll
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\TrainSim\bin\Debug\net9.0\TrainSim.pdb
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\TrainSim\obj\Debug\net9.0\TrainSim.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\TrainSim\obj\Debug\net9.0\TrainSim.AssemblyInfoInputs.cache
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\TrainSim\obj\Debug\net9.0\TrainSim.AssemblyInfo.cs
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\TrainSim\obj\Debug\net9.0\TrainSim.csproj.CoreCompileInputs.cache
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\TrainSim\obj\Debug\net9.0\TrainSim.sourcelink.json
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\TrainSim\obj\Debug\net9.0\TrainSim.dll
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\TrainSim\obj\Debug\net9.0\refint\TrainSim.dll
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\TrainSim\obj\Debug\net9.0\TrainSim.pdb
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\TrainSim\obj\Debug\net9.0\TrainSim.genruntimeconfig.cache
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\ParallelProgramming\TrainSim\obj\Debug\net9.0\ref\TrainSim.dll
