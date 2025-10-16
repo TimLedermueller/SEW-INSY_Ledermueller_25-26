@@ -22,7 +22,7 @@ class Program
             Random rnd = new Random();
 
             //für String Suche
-             int search = rnd.Next(0, 5);
+             int search = rnd.Next(0, 20);
             Thread[] threads = new Thread[iteration];
 
 

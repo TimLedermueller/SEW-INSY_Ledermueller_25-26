@@ -17,7 +17,6 @@ class Program
         static int[] gatePos;                 // Position jeder Schranke auf dem Track
         static SemaphoreSlim[] gateSem; 
         
-        
         static void Main()
         {
             Console.CursorVisible = false;
@@ -30,8 +29,7 @@ class Program
                 Render();
                 DrawGates();    // Schranken Zeichnen
                // DrawSections();// Zug Zeichnen
-                Thread.Sleep(tickMs);
-                
+                Thread.Sleep(tickMs); 
             }
         }
         static void HandleInput()

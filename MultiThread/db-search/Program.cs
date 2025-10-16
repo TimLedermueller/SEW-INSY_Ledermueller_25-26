@@ -40,15 +40,25 @@ class Program
             {
                 using (var conn = new MySqlConnection(connectionString))
                 {
+                   
                     
                     conn.Open();
                     // string sql = "SELECT Id, RandomString, rn FROM Codes WHERE rn LIKE  @search";
                     // string sql = "SELECT Id, RandomString, rn FROM Codes WHERE RandomString =  @search";
+                    
+                    
                     string sql = "SELECT Id, RandomString, rn FROM Codes WHERE RandomString LIKE  @search";
+                    sql += "OR nr = " + search; 
+                    
+                    string sql = "SELECT Id, RandomString, rn FROM Codes WHERE RandomString LIKE '"+rw+ %'"";
+                    // sql += "Union SELECT * FORM Codes WHERE rn = " + search;
+                    
                     using (var cmd = new MySqlCommand(sql, conn))
                     {
                         cmd.Parameters.AddWithValue("@search", search);
 
+                        
+                        
                         using (var reader = cmd.ExecuteReader())
                         {
                             while (reader.Read())
