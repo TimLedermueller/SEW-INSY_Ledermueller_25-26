@@ -37,3 +37,4 @@ C:\Users\timle\Desktop\4 Klasse\SYTD\API\PerformentstestUNION\PerformentstestUNI
 C:\Users\timle\Desktop\4 Klasse\SYTD\API\PerformentstestUNION\PerformentstestUNION\obj\Debug\net9.0\PerformentstestUNION.pdb
 C:\Users\timle\Desktop\4 Klasse\SYTD\API\PerformentstestUNION\PerformentstestUNION\obj\Debug\net9.0\PerformentstestUNION.genruntimeconfig.cache
 C:\Users\timle\Desktop\4 Klasse\SYTD\API\PerformentstestUNION\PerformentstestUNION\obj\Debug\net9.0\ref\PerformentstestUNION.dll
+C:\Users\timle\Desktop\4 Klasse\SYTD\API\PerformentstestUNION\PerformentstestUNION\obj\Debug\net9.0\PerformentstestUNION.sourcelink.json
