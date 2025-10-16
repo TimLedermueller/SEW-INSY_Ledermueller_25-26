@@ -23,7 +23,7 @@ class Program
     static Random rand = new Random();
 
     static int trainCounter = 0;
-    static Dictionary<int, string> trainStatus = new Dictionary<int, string>();
+    static Dictionary<int, string  > trainStatus = new Dictionary<int, string>();
 
     // Schranken-Öffnungsdauer (ms), wenn per Taste 1..7 geöffnet
     const int GateOpenMillis = 2000;
@@ -197,7 +197,7 @@ class Program
                 // 3) Bewegung
                 Position = next;
                 Thread.Sleep(200);
-
+ 
                 // 4) Alten Sektor freigeben, wenn der Schluss den Sektor verlassen hat
                 //    Schluss = Position - (Length - 1)
                 int tail = Position - (Length - 1);

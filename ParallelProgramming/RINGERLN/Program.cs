@@ -10,7 +10,7 @@ class Program
     static SemaphoreSlim[] semaphoren = new SemaphoreSlim[ANZ];
 
     static void Main()
-    {
+    {   
 
         for (int i = 0; i < ANZ; i++) // Semaphoren initialisieren
             semaphoren[i] = new SemaphoreSlim(i == Start ? 1 : 0, 1);
