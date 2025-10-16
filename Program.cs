@@ -11,7 +11,7 @@ class Program
 
         using var conn = new MySqlConnection(connStr);
         conn.Open();
-        Console.WriteLine("✅ Verbindung hergestellt!");
+        Console.WriteLine(" Verbindung hergestellt!");
 
         string sqlUnion = @"
             SELECT product_id FROM products_a WHERE category = 'Electronics'
