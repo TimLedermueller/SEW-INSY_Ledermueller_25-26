@@ -1,0 +1,99 @@
+﻿@page "/counter"
+
+<PageTitle>Primzahlen</PageTitle>
+
+<h1>Primzahlenberechnung</h1>
+
+<form>
+    <label>Echo-Test:</label><br />
+    <input @bind="dummytext" @bind:event="oninput" class="form-control" style="width:200px;" />
+    <label class="ms-2">@dummytext</label>
+</form>
+
+<div class="mt-3">
+    <label>Primzahl-Grenze:</label><br />
+    <input class="form-control" style="width:200px;" @bind="limitText" />
+</div>
+
+<div class="mt-3 d-flex gap-2">
+    <button class="btn btn-primary" @onclick="Direct">Direct Method Call</button>
+    <button class="btn btn-success" @onclick="Background">Async Method Call</button>
+</div>
+
+<p class="mt-3">Primes found: @output</p>
+
+@code {
+    // --- Felder ---
+    private string dummytext = string.Empty;
+    private string limitText = "10000000"; // Eingabegrenze
+    private string output = "—";
+
+    // --- Service oder lokale Berechnung ---
+    // (Falls du bereits PrimeService nutzt, kannst du ihn hier injizieren)
+    // @inject DummyWebApp.Services.PrimeService Primes;
+
+    // --- Lokale Implementierung ---
+    private void Sieve(int n, out int result)
+    {
+        bool[] isPrime = new bool[n + 1];
+        for (int i = 2; i <= n; i++) isPrime[i] = true;
+
+        for (int i = 2; i * i <= n; i++)
+        {
+            if (!isPrime[i]) continue;
+            for (int j = i * i; j <= n; j += i)
+                isPrime[j] = false;
+        }
+
+        result = isPrime.Count(x => x);
+    }
+
+    private async Task<int> SieveAsync(int n)
+    {
+        // async-Version für Hintergrundberechnung
+        return await Task.Run(() =>
+        {
+            bool[] isPrime = new bool[n + 1];
+            for (int i = 2; i <= n; i++) isPrime[i] = true;
+
+            for (int i = 2; i * i <= n; i++)
+            {
+                if (!isPrime[i]) continue;
+                for (int j = i * i; j <= n; j += i)
+                    isPrime[j] = false;
+            }
+
+            return isPrime.Count(x => x);
+        });
+    }
+    private void Direct()
+    {
+        output = "calculating...";
+        StateHasChanged();
+
+        if (!int.TryParse(limitText, out int primes) || primes < 2)
+        {
+            output = "invalid input";
+            return;
+        }
+
+        Sieve(primes, out int result); // blockiert das UI
+        output = result.ToString();
+    }
+
+    // --- Button 2: Asynchron ---
+    private async Task Background()
+    {
+        output = "calculating...";
+        StateHasChanged();
+
+        if (!int.TryParse(limitText, out int primes) || primes < 2)
+        {
+            output = "invalid input";
+            return;
+        }
+
+        int result = await SieveAsync(primes);
+        output = result.ToString();
+    }
+}
