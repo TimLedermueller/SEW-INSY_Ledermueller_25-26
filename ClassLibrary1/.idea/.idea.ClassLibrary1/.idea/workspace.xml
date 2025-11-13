@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="764aa68f-3c19-40bc-b54e-21b8b0e06238" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../PrimzahlenSiebServerApp/PrimzahlenSiebServerApp/bin/Debug/net7.0/PrimzahlenSiebServerApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../PrimzahlenSiebServerApp/PrimzahlenSiebServerApp/bin/Debug/net7.0/PrimzahlenSiebServerApp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PrimzahlenSiebServerApp/PrimzahlenSiebServerApp/bin/Debug/net7.0/PrimzahlenSiebServerApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../PrimzahlenSiebServerApp/PrimzahlenSiebServerApp/bin/Debug/net7.0/PrimzahlenSiebServerApp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PrimzahlenSiebServerApp/PrimzahlenSiebServerApp/obj/Debug/net7.0/PrimzahlenSiebServerApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../PrimzahlenSiebServerApp/PrimzahlenSiebServerApp/obj/Debug/net7.0/PrimzahlenSiebServerApp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PrimzahlenSiebServerApp/PrimzahlenSiebServerApp/obj/Debug/net7.0/PrimzahlenSiebServerApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../PrimzahlenSiebServerApp/PrimzahlenSiebServerApp/obj/Debug/net7.0/PrimzahlenSiebServerApp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PrimzahlenSiebServerApp/PrimzahlenSiebServerApp/obj/Debug/net7.0/ref/PrimzahlenSiebServerApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../PrimzahlenSiebServerApp/PrimzahlenSiebServerApp/obj/Debug/net7.0/ref/PrimzahlenSiebServerApp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PrimzahlenSiebServerApp/PrimzahlenSiebServerApp/obj/Debug/net7.0/refint/PrimzahlenSiebServerApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../PrimzahlenSiebServerApp/PrimzahlenSiebServerApp/obj/Debug/net7.0/refint/PrimzahlenSiebServerApp.dll" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="35NLlOT5jsKJC8btuHKRXDk66c4" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="764aa68f-3c19-40bc-b54e-21b8b0e06238" name="Changes" comment="" />
+      <created>1762945732671</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1762945732671</updated>
+      <workItem from="1762945733760" duration="4000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.Tasks.TaskCanceledException" breakIfHandledByOtherCode="false" displayValue="System.Threading.Tasks.TaskCanceledException" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

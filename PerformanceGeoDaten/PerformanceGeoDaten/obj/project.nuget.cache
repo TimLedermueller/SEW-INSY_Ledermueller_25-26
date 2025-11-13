@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "HLo0+BVMJPY=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\timle\\Desktop\\2CHIT\\Gitup\\SEW-INSY_Ledermueller_25-26\\PerformanceGeoDaten\\PerformanceGeoDaten\\PerformanceGeoDaten.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\timle\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\timle\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.2\\microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\timle\\.nuget\\packages\\mysqlconnector\\2.5.0-beta.1\\mysqlconnector.2.5.0-beta.1.nupkg.sha512",
+    "C:\\Users\\timle\\.nuget\\packages\\system.diagnostics.diagnosticsource\\8.0.1\\system.diagnostics.diagnosticsource.8.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
