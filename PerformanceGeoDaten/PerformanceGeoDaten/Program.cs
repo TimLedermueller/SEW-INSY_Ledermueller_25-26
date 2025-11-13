@@ -1,45 +1,83 @@
 ﻿using System;
 using System.Diagnostics;
-using MySqlConnector;
+using System.Globalization;
+using MySql.Data.MySqlClient;
 
-class Program
+
+string connStr = "Server=localhost;Database=geo_niederoesterreich;User ID=root;Password=insy;";
+
+
+Random rnd = new Random();
+int runs = 100;
+
+Stopwatch sw = new Stopwatch();
+int totalHits = 0;
+
+
+CultureInfo ci = CultureInfo.InvariantCulture;
+
+using (var conn = new MySqlConnection(connStr))
 {
-    static readonly Random rng = new Random();
-    static (double lat, double lon) RandStart()
-        => (47.0 + rng.NextDouble()*2.0, 12.0 + rng.NextDouble()*3.0); // grob AT
+    conn.Open();
+    
+    string sql = @"
+        SELECT tippID,
+               ST_Distance_Sphere(
+                   coordinates,
+                   POINT(@lon, @lat)
+               ) AS distance_m
+        FROM tipps
+        WHERE ST_Distance_Sphere(
+                  coordinates,
+                  POINT(@lon, @lat)
+              ) <= @radiusMeters;
+    ";
 
-    static double RandRadiusKm() => 10 + rng.NextDouble()*10; // 10–20 km
-
-    static async System.Threading.Tasks.Task Main()
+    using (var cmd = new MySqlCommand(sql, conn))
     {
-        var cs = "Server=127.0.0.1;Port=3307;Database=perf;User ID=root;Password=insy;AllowPublicKeyRetrieval=True;SslMode=None;ConnectionTimeout=15;";
-        int runs = 1000;  // 100 / 1000 / …
+       
+        cmd.Parameters.Add("@lon", MySqlDbType.Double);
+        cmd.Parameters.Add("@lat", MySqlDbType.Double);
+        cmd.Parameters.Add("@radiusMeters", MySqlDbType.Double);
 
-        await using var conn = new MySqlConnection(cs);
-        await conn.OpenAsync();
+        sw.Start();
 
-        string sql = @"
-SELECT tippId, text, ST_Distance_Sphere(coordinates, POINT(@lon, @lat)) AS distance_m
-FROM tipps
-WHERE ST_Distance_Sphere(coordinates, POINT(@lon, @lat)) <= @r_km * 1000
-ORDER BY distance_m";
-
-        var sw = Stopwatch.StartNew();
         for (int i = 0; i < runs; i++)
         {
-            var (lat, lon) = RandStart();
-            var r = RandRadiusKm();
+            int radiusKm = rnd.Next(10, 21);
+            double radiusMeters = radiusKm * 1000;
 
-            await using var cmd = new MySqlCommand(sql, conn);
-            cmd.Parameters.AddWithValue("@lat", lat);
-            cmd.Parameters.AddWithValue("@lon", lon);
-            cmd.Parameters.AddWithValue("@r_km", r);
+            double lat = 47.0 + rnd.NextDouble() * 2.0;  // 47–49°
+            double lon = 14.0 + rnd.NextDouble() * 3.0;  // 14–17°
 
-            // optional: nur zählen, um Overhead zu reduzieren
-            await using var rdr = await cmd.ExecuteReaderAsync();
-            while (await rdr.ReadAsync()) { /* noop */ }
+          
+            cmd.Parameters["@lon"].Value = lon;
+            cmd.Parameters["@lat"].Value = lat;
+            cmd.Parameters["@radiusMeters"].Value = radiusMeters;
+
+            using (var r = cmd.ExecuteReader())
+            {
+                int hitCountThisRun = 0;
+
+                while (r.Read())
+                {
+                    // Wenn du Details brauchst, hier auslesen:
+                    // int id = r.GetInt32("tippID");
+                    // double dist = r.GetDouble("distance_m");
+                    hitCountThisRun++;
+                }
+
+                totalHits += hitCountThisRun;
+                // Für Performance lieber im Loop nix schreiben
+                // Console.WriteLine($"Run {i+1}: {hitCountThisRun} Treffer");
+            }
         }
+
         sw.Stop();
-        Console.WriteLine($"Runs: {runs}, total: {sw.Elapsed.TotalSeconds:F2}s, avg: {sw.Elapsed.TotalMilliseconds/runs:F2} ms/q");
     }
 }
+
+Console.WriteLine($"Runs:        {runs}");
+Console.WriteLine($"Total hits:  {totalHits}");
+Console.WriteLine($"Total time:  {sw.ElapsedMilliseconds} ms");
+Console.WriteLine($"Avg/query:   {sw.ElapsedMilliseconds / (double)runs:F2} ms");

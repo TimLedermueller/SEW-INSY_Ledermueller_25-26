@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerformanceGeoDaten", "PerformanceGeoDaten\PerformanceGeoDaten.csproj", "{8488C912-AE43-4324-B78D-7A5650488760}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySQLANDMongo", "MySQLANDMongo\MySQLANDMongo.csproj", "{42327CE2-0749-4ED2-9DBB-DAD43F524ED9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{8488C912-AE43-4324-B78D-7A5650488760}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8488C912-AE43-4324-B78D-7A5650488760}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8488C912-AE43-4324-B78D-7A5650488760}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42327CE2-0749-4ED2-9DBB-DAD43F524ED9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42327CE2-0749-4ED2-9DBB-DAD43F524ED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42327CE2-0749-4ED2-9DBB-DAD43F524ED9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42327CE2-0749-4ED2-9DBB-DAD43F524ED9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
