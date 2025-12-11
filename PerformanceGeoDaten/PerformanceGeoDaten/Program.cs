@@ -3,9 +3,8 @@ using System.Diagnostics;
 using System.Globalization;
 using MySql.Data.MySqlClient;
 
-
-string connStr = "Server=localhost;Database=geo_niederoesterreich;User ID=root;Password=insy;";
-
+string connStr =
+    "Server=127.0.0.1;Port=3307;Database=tipps;User ID=root;Password=insy;";
 
 Random rnd = new Random();
 int runs = 100;
@@ -21,17 +20,17 @@ using (var conn = new MySqlConnection(connStr))
     conn.Open();
     
     string sql = @"
-        SELECT tippID,
-               ST_Distance_Sphere(
-                   coordinates,
-                   POINT(@lon, @lat)
-               ) AS distance_m
-        FROM tipps
-        WHERE ST_Distance_Sphere(
-                  coordinates,
-                  POINT(@lon, @lat)
-              ) <= @radiusMeters;
-    ";
+    SELECT tippID,
+           ST_Distance_Sphere(
+               coordinates,
+               ST_SRID(POINT(@lon, @lat), 4326)
+           ) AS distance_m
+    FROM tipps
+    WHERE ST_Distance_Sphere(
+              coordinates,
+              ST_SRID(POINT(@lon, @lat), 4326)
+          ) <= @radiusMeters;
+";
 
     using (var cmd = new MySqlCommand(sql, conn))
     {
