@@ -93,8 +93,6 @@ var collection = mongoDb.GetCollection<BsonDocument>("tipps");
 
 Console.WriteLine("[MongoDB] Verbunden.");
 
-
-
 string sql = "SELECT tippId, text, lat, lon FROM tipps;";
 using var cmd = new MySqlCommand(sql, mysqlConn);
 using var reader = cmd.ExecuteReader();
