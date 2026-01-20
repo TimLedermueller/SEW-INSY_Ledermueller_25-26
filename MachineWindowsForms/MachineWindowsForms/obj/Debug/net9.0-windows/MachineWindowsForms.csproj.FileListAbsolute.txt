@@ -1,0 +1,15 @@
+C:\Users\maran\Documents\GitHub\SEW-INSY_Zinner_25-26\MachineWindowsForms\MachineWindowsForms\bin\Debug\net9.0-windows\MachineWindowsForms.exe
+C:\Users\maran\Documents\GitHub\SEW-INSY_Zinner_25-26\MachineWindowsForms\MachineWindowsForms\bin\Debug\net9.0-windows\MachineWindowsForms.deps.json
+C:\Users\maran\Documents\GitHub\SEW-INSY_Zinner_25-26\MachineWindowsForms\MachineWindowsForms\bin\Debug\net9.0-windows\MachineWindowsForms.runtimeconfig.json
+C:\Users\maran\Documents\GitHub\SEW-INSY_Zinner_25-26\MachineWindowsForms\MachineWindowsForms\bin\Debug\net9.0-windows\MachineWindowsForms.dll
+C:\Users\maran\Documents\GitHub\SEW-INSY_Zinner_25-26\MachineWindowsForms\MachineWindowsForms\bin\Debug\net9.0-windows\MachineWindowsForms.pdb
+C:\Users\maran\Documents\GitHub\SEW-INSY_Zinner_25-26\MachineWindowsForms\MachineWindowsForms\obj\Debug\net9.0-windows\MachineWindowsForms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maran\Documents\GitHub\SEW-INSY_Zinner_25-26\MachineWindowsForms\MachineWindowsForms\obj\Debug\net9.0-windows\MachineWindowsForms.AssemblyInfoInputs.cache
+C:\Users\maran\Documents\GitHub\SEW-INSY_Zinner_25-26\MachineWindowsForms\MachineWindowsForms\obj\Debug\net9.0-windows\MachineWindowsForms.AssemblyInfo.cs
+C:\Users\maran\Documents\GitHub\SEW-INSY_Zinner_25-26\MachineWindowsForms\MachineWindowsForms\obj\Debug\net9.0-windows\MachineWindowsForms.csproj.CoreCompileInputs.cache
+C:\Users\maran\Documents\GitHub\SEW-INSY_Zinner_25-26\MachineWindowsForms\MachineWindowsForms\obj\Debug\net9.0-windows\MachineWindowsForms.sourcelink.json
+C:\Users\maran\Documents\GitHub\SEW-INSY_Zinner_25-26\MachineWindowsForms\MachineWindowsForms\obj\Debug\net9.0-windows\MachineWindowsForms.dll
+C:\Users\maran\Documents\GitHub\SEW-INSY_Zinner_25-26\MachineWindowsForms\MachineWindowsForms\obj\Debug\net9.0-windows\refint\MachineWindowsForms.dll
+C:\Users\maran\Documents\GitHub\SEW-INSY_Zinner_25-26\MachineWindowsForms\MachineWindowsForms\obj\Debug\net9.0-windows\MachineWindowsForms.pdb
+C:\Users\maran\Documents\GitHub\SEW-INSY_Zinner_25-26\MachineWindowsForms\MachineWindowsForms\obj\Debug\net9.0-windows\MachineWindowsForms.genruntimeconfig.cache
+C:\Users\maran\Documents\GitHub\SEW-INSY_Zinner_25-26\MachineWindowsForms\MachineWindowsForms\obj\Debug\net9.0-windows\ref\MachineWindowsForms.dll
