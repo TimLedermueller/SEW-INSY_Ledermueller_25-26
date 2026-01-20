@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Trainloeschen")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+29cebf0561b301251f82ebd74287df257ebee943")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8cc9190bf7294e9bca48efa31377f0cd221f2972")]
 [assembly: System.Reflection.AssemblyProductAttribute("Trainloeschen")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Trainloeschen")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
