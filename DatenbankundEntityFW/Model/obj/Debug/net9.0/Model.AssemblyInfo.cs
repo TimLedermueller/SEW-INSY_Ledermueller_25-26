@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("DemoControllers")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Model")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ae9b0eb7460030f5197ba780947ca060cafd277")]
-[assembly: System.Reflection.AssemblyProductAttribute("DemoControllers")]
-[assembly: System.Reflection.AssemblyTitleAttribute("DemoControllers")]
+[assembly: System.Reflection.AssemblyProductAttribute("Model")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Model")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Von der MSBuild WriteCodeFragment-Klasse generiert.
