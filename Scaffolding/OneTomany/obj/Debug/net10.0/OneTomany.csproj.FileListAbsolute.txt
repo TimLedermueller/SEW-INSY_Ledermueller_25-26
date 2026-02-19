@@ -1,0 +1,15 @@
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\Scaffolding\OneTomany\bin\Debug\net10.0\OneTomany.exe
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\Scaffolding\OneTomany\bin\Debug\net10.0\OneTomany.deps.json
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\Scaffolding\OneTomany\bin\Debug\net10.0\OneTomany.runtimeconfig.json
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\Scaffolding\OneTomany\bin\Debug\net10.0\OneTomany.dll
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\Scaffolding\OneTomany\bin\Debug\net10.0\OneTomany.pdb
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\Scaffolding\OneTomany\obj\Debug\net10.0\OneTomany.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\Scaffolding\OneTomany\obj\Debug\net10.0\OneTomany.AssemblyInfoInputs.cache
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\Scaffolding\OneTomany\obj\Debug\net10.0\OneTomany.AssemblyInfo.cs
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\Scaffolding\OneTomany\obj\Debug\net10.0\OneTomany.csproj.CoreCompileInputs.cache
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\Scaffolding\OneTomany\obj\Debug\net10.0\OneTomany.sourcelink.json
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\Scaffolding\OneTomany\obj\Debug\net10.0\OneTomany.dll
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\Scaffolding\OneTomany\obj\Debug\net10.0\refint\OneTomany.dll
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\Scaffolding\OneTomany\obj\Debug\net10.0\OneTomany.pdb
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\Scaffolding\OneTomany\obj\Debug\net10.0\OneTomany.genruntimeconfig.cache
+C:\Users\timle\Desktop\4 Klasse\Softwareentwicklung\Repository\Scaffolding\OneTomany\obj\Debug\net10.0\ref\OneTomany.dll

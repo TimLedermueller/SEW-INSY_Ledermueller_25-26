@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Scaffolding")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("OneTomany")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+17f1b5c3dc52b1e40f995b05541da66a797dd118")]
-[assembly: System.Reflection.AssemblyProductAttribute("Scaffolding")]
-[assembly: System.Reflection.AssemblyTitleAttribute("Scaffolding")]
+[assembly: System.Reflection.AssemblyProductAttribute("OneTomany")]
+[assembly: System.Reflection.AssemblyTitleAttribute("OneTomany")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Von der MSBuild WriteCodeFragment-Klasse generiert.
