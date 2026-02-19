@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scaffolding", "Scaffolding\Scaffolding.csproj", "{EDCF8F3E-B370-48B3-9CC7-E6C7038D193E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EDCF8F3E-B370-48B3-9CC7-E6C7038D193E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDCF8F3E-B370-48B3-9CC7-E6C7038D193E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDCF8F3E-B370-48B3-9CC7-E6C7038D193E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDCF8F3E-B370-48B3-9CC7-E6C7038D193E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
