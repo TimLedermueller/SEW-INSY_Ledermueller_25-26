@@ -36,5 +36,3 @@ public class Room
     // Optional reference navigation to principal
     public Building Bulding { get; set; } = null; 
 }
-
-
