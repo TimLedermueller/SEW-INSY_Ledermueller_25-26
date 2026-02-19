@@ -16,7 +16,7 @@ public class ClassSubjContextx : DbContext
             new MySqlServerVersion(new Version(8, 0, 36))
         );
     }
-
+    
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         // Composite Primary Key
