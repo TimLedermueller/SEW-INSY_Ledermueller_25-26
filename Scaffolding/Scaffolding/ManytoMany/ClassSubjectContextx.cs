@@ -11,7 +11,10 @@ public class ClassSubjContextx : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseMySQL("server=127.0.0.1;uid=root;pwd=insy;database=schoolmanagement;");
+        optionsBuilder.UseMySql(
+            "server=127.0.0.1;uid=root;pwd=insy;database=schoolmanagement;",
+            new MySqlServerVersion(new Version(8, 0, 36))
+        );
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

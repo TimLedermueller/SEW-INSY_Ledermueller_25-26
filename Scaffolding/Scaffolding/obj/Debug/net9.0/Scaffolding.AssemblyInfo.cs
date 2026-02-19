@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Scaffolding")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4582280a38362a4271eea361ded008eacd2b68f3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+74af49ba58a5e881a5671a700747d4a100328fc1")]
 [assembly: System.Reflection.AssemblyProductAttribute("Scaffolding")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Scaffolding")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

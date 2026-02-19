@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OHo28vuVdxk=",
+  "dgSpecHash": "EsKdciDSbM4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\timle\\Desktop\\4 Klasse\\Softwareentwicklung\\Scaffolding\\Scaffolding\\ManytoMany\\ManytoMany.csproj",
+  "projectFilePath": "C:\\Users\\timle\\Desktop\\4 Klasse\\Softwareentwicklung\\Repository\\Scaffolding\\Scaffolding\\ManytoMany\\ManytoMany.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\timle\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\timle\\.nuget\\packages\\microsoft.build.framework\\18.0.2\\microsoft.build.framework.18.0.2.nupkg.sha512",
@@ -32,7 +32,9 @@
     "C:\\Users\\timle\\.nuget\\packages\\microsoft.extensions.primitives\\10.0.3\\microsoft.extensions.primitives.10.0.3.nupkg.sha512",
     "C:\\Users\\timle\\.nuget\\packages\\microsoft.visualstudio.solutionpersistence\\1.0.52\\microsoft.visualstudio.solutionpersistence.1.0.52.nupkg.sha512",
     "C:\\Users\\timle\\.nuget\\packages\\mono.texttemplating\\3.0.0\\mono.texttemplating.3.0.0.nupkg.sha512",
+    "C:\\Users\\timle\\.nuget\\packages\\mysqlconnector\\2.4.0\\mysqlconnector.2.4.0.nupkg.sha512",
     "C:\\Users\\timle\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\timle\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\9.0.0\\pomelo.entityframeworkcore.mysql.9.0.0.nupkg.sha512",
     "C:\\Users\\timle\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.11\\sqlitepclraw.bundle_e_sqlite3.2.1.11.nupkg.sha512",
     "C:\\Users\\timle\\.nuget\\packages\\sqlitepclraw.core\\2.1.11\\sqlitepclraw.core.2.1.11.nupkg.sha512",
     "C:\\Users\\timle\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.11\\sqlitepclraw.lib.e_sqlite3.2.1.11.nupkg.sha512",
@@ -45,5 +47,18 @@
     "C:\\Users\\timle\\.nuget\\packages\\system.composition.runtime\\9.0.0\\system.composition.runtime.9.0.0.nupkg.sha512",
     "C:\\Users\\timle\\.nuget\\packages\\system.composition.typedparts\\9.0.0\\system.composition.typedparts.9.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "message": "Erkannte Paketversion außerhalb der Abhängigkeitseinschränkung: \"Pomelo.EntityFrameworkCore.MySql 9.0.0\" erfordert Microsoft.EntityFrameworkCore.Relational (>= 9.0.0 && <= 9.0.999), aber es wurde Version Microsoft.EntityFrameworkCore.Relational 10.0.3 aufgelöst.",
+      "projectPath": "C:\\Users\\timle\\Desktop\\4 Klasse\\Softwareentwicklung\\Repository\\Scaffolding\\Scaffolding\\ManytoMany\\ManytoMany.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\timle\\Desktop\\4 Klasse\\Softwareentwicklung\\Repository\\Scaffolding\\Scaffolding\\ManytoMany\\ManytoMany.csproj",
+      "libraryId": "Microsoft.EntityFrameworkCore.Relational",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
 }
