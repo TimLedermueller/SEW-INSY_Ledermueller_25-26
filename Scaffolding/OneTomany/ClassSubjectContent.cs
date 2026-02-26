@@ -1,5 +1,5 @@
-﻿namespace ManytoMany;
-
+﻿namespace OneTomany;
+ 
 public class ClassSubjectContent : IDisposable
 {
     public int ClassId { get; set; }

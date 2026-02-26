@@ -13,4 +13,22 @@
       <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="9.0.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Remove="CodeFirstApproach\**" />
+      <Compile Remove="FirstEFCoreApp\**" />
+      <Compile Remove="Scaffolding\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="CodeFirstApproach\**" />
+      <EmbeddedResource Remove="FirstEFCoreApp\**" />
+      <EmbeddedResource Remove="Scaffolding\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="CodeFirstApproach\**" />
+      <None Remove="FirstEFCoreApp\**" />
+      <None Remove="Scaffolding\**" />
+    </ItemGroup>
+
 </Project>
