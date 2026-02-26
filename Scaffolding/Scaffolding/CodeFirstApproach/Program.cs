@@ -3,9 +3,25 @@
 using ManytoMany;
 using Microsoft.EntityFrameworkCore;
 
-Console.WriteLine("Scaffolding CodeFirstApproach");
+using ManytoMany;
+using Microsoft.EntityFrameworkCore;
 
-using var db = new ClassSubjContextx();
-await db.Database.MigrateAsync();
+using var schoolContext = new ClassSubjContextx();
 
-Console.WriteLine("DB ready.");
+Console.WriteLine("subjects (without include)");
+foreach (var subject in schoolContext.Subjects)
+{
+    // Ohne Include ist ClassSubjects nicht geladen -> Count ist meist 0 (oder LazyLoading wäre nötig)
+    Console.WriteLine($"{subject.Id}, {subject.Title}");
+}
+
+Console.WriteLine("subjects with count of classes (with include)");
+var subjectsWithClasses = schoolContext.Subjects
+    .Include(s => s.ClassSubjects)
+    .ThenInclude(cs => cs.Class);
+
+foreach (var subject in subjectsWithClasses)
+{
+    var classCount = subject.ClassSubjects.Count;
+    Console.WriteLine($"{subject.Id}, {subject.Title}, {classCount}");
+}

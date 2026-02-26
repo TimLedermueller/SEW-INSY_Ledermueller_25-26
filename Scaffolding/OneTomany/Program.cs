@@ -1,38 +1,18 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using Microsoft.EntityFrameworkCore;
+using OneTomany;
 
-Console.WriteLine("Hello, World!");
-// See https://aka.ms/new-console-template for more information
-//Blog sew = new Blog {Id = 1, Topic = "SEW"};
-//Post p = new Post {Id = 1, BlogId = 1, Text = "suppa"};
+using var db = new ClassSubjContextx();
+await db.Database.MigrateAsync();
 
-Building bulding1 = new Building{Id = 1, Name = "Bulding1"}; 
-Room room1 = new Room{Id = 1, Name = "Room1"};
+var classes = await db.Classes
+    .Include(c => c.ClassSubjects)
+    .ThenInclude(cs => cs.Subject)
+    .ToListAsync();
 
-room1.Bulding = bulding1; //Beziehungen pflegen
-Console.WriteLine(room1.Bulding.Name); //Über das Navigationsproperty
-
-//bulding1.Rooms(room1);
-bulding1.Rooms.Add(room1);
-Console.WriteLine(bulding1.Rooms[0].Name);
-
-//var Blog_of_P = //Liste von Blogs den mit Nummer 1 Suchen
-
-// Principal (parent)
-public class Building
+foreach (var c in classes)
 {
-    public int Id { get; set; }
-    public string Name{ get; set; }
-    public List<Room> Rooms{ get; } = new List<Room>(); // Collection navigation containing dependents
-}   // ICollection -List
-
-// Dependent (child)
-public class Room
-{
-    public int Id { get; set; }
-    public string Name{ get; set; }
-    public int Roum_id { get; set; } // Optional foreign key property
-    
-    //Navigationsproperty
-    // Optional reference navigation to principal
-    public Building Bulding { get; set; } = null; 
+    Console.WriteLine($"Class {c.Name}:");
+    foreach (var link in c.ClassSubjects)
+        Console.WriteLine($"  - {link.Subject.Title} | {link.Content}");
+    Console.WriteLine();
 }

@@ -1,6 +1,6 @@
 ﻿namespace ManytoMany.Interface;
 
-public class IHasId
+public interface IHasId
 {
-    
+    int Id { get; set; }
 }

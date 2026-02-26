@@ -1,4 +1,7 @@
-﻿namespace ManytoMany;
+﻿using OneTomany;
+
+namespace OneTomany;
+
 
 
 using Microsoft.EntityFrameworkCore;
@@ -7,12 +10,12 @@ public class ClassSubjContextx : DbContext
 {
     public DbSet<Classes> Classes { get; set; }
     public DbSet<Subject> Subjects { get; set; }
-    public DbSet<ClassSubjectContent> ClassSubjectContents { get; set; }
+    public DbSet<ClassSubjectContent> ClassSubjectContent { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.UseMySql(
-            "server=127.0.0.1;uid=root;pwd=insy;database=schoolmanagement;",
+            "server=127.0.0.1;port=3306;uid=root;pwd=insy;database=schoolmanagement;",
             new MySqlServerVersion(new Version(8, 0, 36))
         );
     }
