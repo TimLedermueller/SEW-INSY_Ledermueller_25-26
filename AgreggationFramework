@@ -61,4 +61,11 @@ db.emps.find({ COMM: { $ne: null } }, { EMPNO: 1, ENAME: 1, JOB: 1, _id: 0 });
 
 // 11
 db.emps.find({}, { ENAME: 1, COMM: 1, _id: 0 }).sort({ COMM: -1 });
+// 12
+db.emps.find({ JOB: { $nin: ["MANAGER", "PRESIDENT"] } }, { ENAME: 1, dept_id: 1, HIREDATE: 1, _id: 0 }).sort({ dept_id: 1, HIREDATE: -1 });
 
+// 13
+db.emps.find({ $expr: { $eq: [ { $strLenCP: "$ENAME" }, 6 ] } }, { ENAME: 1, _id: 0 });
+
+// 14
+db.emps.aggregate([{ $match: { dept_id: 30 } }, { $project: { _id: 0, Info: { $concat: ["$ENAME", " - ", "$JOB"] } } }]);
