@@ -42,4 +42,5 @@ db.emps.find({ dept_id: { $ne: 10 } });
 db.emps.find({ $expr: { $gt: ["$COMM", "$SAL"] } });
 
 
-
+// 6
+db.emps.find({ HIREDATE: ISODate("1981-12-03T00:00:00.000Z") });
