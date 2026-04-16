@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SemaphoreAngaben", "SemaphoreAngaben\SemaphoreAngaben.csproj", "{E6644E14-4EFD-4B33-A79C-C136AB2555FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "F1", "F1\F1.csproj", "{EE7C2EDD-9147-40CD-9328-F328BCECC2AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E6644E14-4EFD-4B33-A79C-C136AB2555FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6644E14-4EFD-4B33-A79C-C136AB2555FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6644E14-4EFD-4B33-A79C-C136AB2555FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6644E14-4EFD-4B33-A79C-C136AB2555FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE7C2EDD-9147-40CD-9328-F328BCECC2AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE7C2EDD-9147-40CD-9328-F328BCECC2AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE7C2EDD-9147-40CD-9328-F328BCECC2AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE7C2EDD-9147-40CD-9328-F328BCECC2AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

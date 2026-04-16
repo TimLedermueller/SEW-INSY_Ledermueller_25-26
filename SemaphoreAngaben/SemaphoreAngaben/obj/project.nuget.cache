@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZK/TE8sIVdY=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\timle\\Desktop\\2CHIT\\Gitup\\SEW-INSY_Ledermueller_25-26\\SemaphoreAngaben\\SemaphoreAngaben\\SemaphoreAngaben.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\timle\\.nuget\\packages\\system.threading.tasks.extensions\\4.6.3\\system.threading.tasks.extensions.4.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}

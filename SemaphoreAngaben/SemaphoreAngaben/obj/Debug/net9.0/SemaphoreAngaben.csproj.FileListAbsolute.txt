@@ -1,0 +1,15 @@
+C:\Users\timle\Desktop\2CHIT\Gitup\SEW-INSY_Ledermueller_25-26\SemaphoreAngaben\SemaphoreAngaben\obj\Debug\net9.0\SemaphoreAngaben.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\timle\Desktop\2CHIT\Gitup\SEW-INSY_Ledermueller_25-26\SemaphoreAngaben\SemaphoreAngaben\obj\Debug\net9.0\SemaphoreAngaben.AssemblyInfoInputs.cache
+C:\Users\timle\Desktop\2CHIT\Gitup\SEW-INSY_Ledermueller_25-26\SemaphoreAngaben\SemaphoreAngaben\obj\Debug\net9.0\SemaphoreAngaben.AssemblyInfo.cs
+C:\Users\timle\Desktop\2CHIT\Gitup\SEW-INSY_Ledermueller_25-26\SemaphoreAngaben\SemaphoreAngaben\obj\Debug\net9.0\SemaphoreAngaben.csproj.CoreCompileInputs.cache
+C:\Users\timle\Desktop\2CHIT\Gitup\SEW-INSY_Ledermueller_25-26\SemaphoreAngaben\SemaphoreAngaben\obj\Debug\net9.0\SemaphoreAngaben.sourcelink.json
+C:\Users\timle\Desktop\2CHIT\Gitup\SEW-INSY_Ledermueller_25-26\SemaphoreAngaben\SemaphoreAngaben\bin\Debug\net9.0\SemaphoreAngaben.exe
+C:\Users\timle\Desktop\2CHIT\Gitup\SEW-INSY_Ledermueller_25-26\SemaphoreAngaben\SemaphoreAngaben\bin\Debug\net9.0\SemaphoreAngaben.deps.json
+C:\Users\timle\Desktop\2CHIT\Gitup\SEW-INSY_Ledermueller_25-26\SemaphoreAngaben\SemaphoreAngaben\bin\Debug\net9.0\SemaphoreAngaben.runtimeconfig.json
+C:\Users\timle\Desktop\2CHIT\Gitup\SEW-INSY_Ledermueller_25-26\SemaphoreAngaben\SemaphoreAngaben\bin\Debug\net9.0\SemaphoreAngaben.dll
+C:\Users\timle\Desktop\2CHIT\Gitup\SEW-INSY_Ledermueller_25-26\SemaphoreAngaben\SemaphoreAngaben\bin\Debug\net9.0\SemaphoreAngaben.pdb
+C:\Users\timle\Desktop\2CHIT\Gitup\SEW-INSY_Ledermueller_25-26\SemaphoreAngaben\SemaphoreAngaben\obj\Debug\net9.0\SemaphoreAngaben.dll
+C:\Users\timle\Desktop\2CHIT\Gitup\SEW-INSY_Ledermueller_25-26\SemaphoreAngaben\SemaphoreAngaben\obj\Debug\net9.0\refint\SemaphoreAngaben.dll
+C:\Users\timle\Desktop\2CHIT\Gitup\SEW-INSY_Ledermueller_25-26\SemaphoreAngaben\SemaphoreAngaben\obj\Debug\net9.0\SemaphoreAngaben.pdb
+C:\Users\timle\Desktop\2CHIT\Gitup\SEW-INSY_Ledermueller_25-26\SemaphoreAngaben\SemaphoreAngaben\obj\Debug\net9.0\SemaphoreAngaben.genruntimeconfig.cache
+C:\Users\timle\Desktop\2CHIT\Gitup\SEW-INSY_Ledermueller_25-26\SemaphoreAngaben\SemaphoreAngaben\obj\Debug\net9.0\ref\SemaphoreAngaben.dll
