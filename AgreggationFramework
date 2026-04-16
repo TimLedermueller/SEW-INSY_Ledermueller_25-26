@@ -22,3 +22,9 @@ db.emps.insertOne({"id":7876, "ENAME":"ADAMS","JOB":"CLERK","parent_id":7788,"HI
 db.emps.insertOne({"id":7900, "ENAME":"JAMES","JOB":"CLERK","parent_id":7698,"HIREDATE":new Date("1981-12-03"),"SAL":950, "dept_id":30});
 db.emps.insertOne({"id":7902, "ENAME":"FORD","JOB":"ANALYST","parent_id":7566,"HIREDATE":new Date("1981-12-03"),"SAL":3000, "dept_id":20});
 db.emps.insertOne({"id":7934, "ENAME":"MILLER","JOB":"CLERK","parent_id":7782,"HIREDATE":new Date("1982-01-23"),"SAL":1300, "dept_id":10});
+
+
+db.depts.find({});
+
+// 2
+db.emps.find({ dept_id: 10 }, { ENAME: 1, JOB: 1, HIREDATE: 1, _id: 0 });
