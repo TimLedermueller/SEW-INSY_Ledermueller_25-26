@@ -79,3 +79,5 @@ db.emps.aggregate([
     $project: {"SAL+ifnull(COMM,0)":{$add:["$SAL", {$ifNull: ["$COMM", 0]}]}, "_id":0}
     }
 ])
+// 16
+db.emps.aggregate([{ $project: {"Monatsgehalt": "$SAL", "Tagesgehalt": {$divide: ["$SAL", 22]}, "Stundengehalt": {$divide: ["$SAL", 173.36]}, "_id": 0}}])
