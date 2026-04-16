@@ -44,3 +44,8 @@ db.emps.find({ $expr: { $gt: ["$COMM", "$SAL"] } });
 
 // 6
 db.emps.find({ HIREDATE: ISODate("1981-12-03T00:00:00.000Z") });
+
+//7
+
+// 7
+db.emps.find({ $or: [{ SAL: { $lt: 1250 } }, { SAL: { $gt: 1600 } }] }, { ENAME: 1, SAL: 1, _id: 0 });
