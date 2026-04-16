@@ -69,3 +69,13 @@ db.emps.find({ $expr: { $eq: [ { $strLenCP: "$ENAME" }, 6 ] } }, { ENAME: 1, _id
 
 // 14
 db.emps.aggregate([{ $match: { dept_id: 30 } }, { $project: { _id: 0, Info: { $concat: ["$ENAME", " - ", "$JOB"] } } }]);
+
+// 15
+db.emps.aggregate([
+{$project:{"SAL+COMM":{$add:["$SAL", "$COMM"]}, "_id":0}}])
+
+db.emps.aggregate([
+{
+    $project: {"SAL+ifnull(COMM,0)":{$add:["$SAL", {$ifNull: ["$COMM", 0]}]}, "_id":0}
+    }
+])
