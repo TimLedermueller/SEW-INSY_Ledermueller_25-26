@@ -1,0 +1,129 @@
+@page "/timetables"
+@page "/timetables/{Id:int}"
+@using _11_02_Modelling_1_zu_N.Entities
+@using System.ComponentModel
+@using System.Reflection
+@inject HttpClient Http
+
+<h3>Timetables</h3>
+
+<a class="create-link" href="/timetables/create">Neu erstellen</a>
+
+@if (timetables == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    @foreach (var className in GetClassNames())
+    {
+        <div class="class-block">
+            <h4 class="class-title">@className</h4>
+
+            <table class="untis-table">
+                <thead>
+                    <tr>
+                        <th class="time-header">Stunde</th>
+                        @foreach (var day in weekdays)
+                        {
+                            <th>@day</th>
+                        }
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var lesson in lessons)
+                    {
+                        <tr>
+                            <td class="lesson-info">
+                                <div><strong>@GetLessonNumber(lesson)</strong></div>
+                                <div>@GetEnumDescription(lesson)</div>
+                            </td>
+
+                            @foreach (var day in weekdays)
+                            {
+                                var entry = GetEntry(className, day, lesson);
+
+                                <td class="schedule-cell @(entry == null ? "free-cell" : "busy-cell")">
+                                    @if (entry == null)
+                                    {
+                                        <div class="free-text"></div>
+                                    }
+                                    else
+                                    {
+                                        <div class="subject">@entry.Subject?.Description</div>
+                                        <div class="teacher">@entry.Teacher?.Abbreviation</div>
+
+                                        <div class="actions">
+                                            <a href="/timetables/@entry.Id">Edit</a>
+                                            <button @onclick="() => Delete(entry.Id)">Delete</button>
+                                        </div>
+
+                                        @if (entry.Id == Id)
+                                        {
+                                            <div class="edit-box">
+                                                <TimetablesEditComponent Id="@Id" />
+                                            </div>
+                                        }
+                                    }
+                                </td>
+                            }
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+}
+
+@code {
+    [Parameter] public int Id { get; set; }
+
+    List<Timetable>? timetables;
+
+    List<Weekday> weekdays = Enum.GetValues<Weekday>().ToList();
+    List<Lesson> lessons = Enum.GetValues<Lesson>().ToList();
+
+    protected override async Task OnParametersSetAsync()
+    {
+        timetables = await Http.GetFromJsonAsync<List<Timetable>>("api/timetables");
+    }
+
+    async Task Delete(int id)
+    {
+        await Http.DeleteAsync($"api/timetables/{id}");
+        timetables = await Http.GetFromJsonAsync<List<Timetable>>("api/timetables");
+    }
+
+    List<string> GetClassNames()
+    {
+        return timetables?
+            .Where(t => t.Class != null)
+            .Select(t => t.Class!.Description ?? "Ohne Klasse")
+            .Distinct()
+            .OrderBy(x => x)
+            .ToList()
+            ?? new List<string>();
+    }
+
+    Timetable? GetEntry(string className, Weekday day, Lesson lesson)
+    {
+        return timetables?.FirstOrDefault(t =>
+            (t.Class?.Description ?? "Ohne Klasse") == className &&
+            t.Weekday.Equals(day) &&
+            t.Lesson.Equals(lesson));
+    }
+
+    string GetEnumDescription(Enum value)
+    {
+        var field = value.GetType().GetField(value.ToString());
+        var attr = field?.GetCustomAttribute<DescriptionAttribute>();
+        return attr?.Description ?? value.ToString();
+    }
+
+    string GetLessonNumber(Lesson lesson)
+    {
+        var text = lesson.ToString();
+        var digits = new string(text.Where(char.IsDigit).ToArray());
+        return string.IsNullOrWhiteSpace(digits) ? text : digits;
+    }
+}
