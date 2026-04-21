@@ -1,0 +1,17 @@
+Test Stoff SEW
+
+Stoff Controller + Blazor
+
+Datenbankzugriff vom Controller aus
+
+Aufbau eines Controllers (GET/POST/PUT/DELETE) 
+
+CORE: Programm CS: builder.ServicesAddCors() : mit Pfad
+
+ASYNCHRONE ABFRAGE mit HTTPCLIENT 
+
+Wie kann ich eine LISTE  in HTML CODE DARSTELLEN. WIE kann ich razor PAGES Parameterisieren. 
+
+Extension Metthods um auf ENUM Descriptions zuzugreifen. Wie kann man diese Auslesen(ENUM Description)
+
+Inlineeditieren anschauen.
