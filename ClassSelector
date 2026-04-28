@@ -1,0 +1,18 @@
+@using _11_02_Modelling_1_zu_N.Entities
+
+<select @bind="SelectedId">
+    <option value="">Klasse auswählen</option>
+
+    @foreach (var c in Classes)
+    {
+        <option value="@c.Id">@c.Description</option>
+    }
+</select>
+
+@code {
+    [Parameter] public int? SelectedId { get; set; }
+    [Parameter] public EventCallback<int?> SelectedIdChanged { get; set; }
+
+    [Parameter] public List<Class> Classes { get; set; } = new();
+    [Parameter] public EventCallback OnSubmit { get; set; }
+}
