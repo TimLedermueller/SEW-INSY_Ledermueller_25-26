@@ -1,0 +1,71 @@
+Aufteilung durch Components am 28.4 Teil 1. 
+Class View:
+
+@page "/class-timetable/{Id:int?}"
+@using _11_02_Modelling_1_zu_N.Entities
+@inject HttpClient Http
+
+<h3>Stundenplan</h3>
+
+@if (timetables == null || classes == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+        <tr>
+            <th>
+                <ClassSelector 
+                    @bind-SelectedId="Id"
+                    Classes="classes"
+                    OnSubmit="Submit" />
+            </th>
+
+            <WeekdayComponent />
+        </tr>
+        </thead>
+
+        <tbody>
+        @for (var y = 0; y < lessons.Count; y++)
+        {
+            <LineTSComponent 
+                Y="@y"
+                Less="@lessons[y]"
+                ToShow="timetables" />
+        }
+        </tbody>
+    </table>
+}
+
+@code {
+    [Parameter] public int? Id { get; set; }
+
+    List<Timetable>? timetables;
+    List<Class>? classes;
+
+    List<Lesson> lessons = Enum.GetValues<Lesson>().ToList();
+
+    protected override async Task OnInitializedAsync()
+    {
+        classes = await Http.GetFromJsonAsync<List<Class>>("api/schoolclasses");
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (Id != null)
+        {
+            timetables = await Http.GetFromJsonAsync<List<Timetable>>($"api/timetables/byclass/{Id}");
+        }
+        else
+        {
+            timetables = new();
+        }
+    }
+
+    void Submit()
+    {
+        // Hier später Navigation oder Neuladen
+    }
+}
