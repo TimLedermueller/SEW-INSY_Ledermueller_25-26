@@ -1,0 +1,118 @@
+@implements IDisposable
+@using System.Globalization
+
+<div class="clock-container">
+    <svg class="analog-clock" viewBox="0 0 200 200">
+        <circle cx="100" cy="100" r="98" fill="#f0f0f0" />
+        <circle cx="100" cy="100" r="95" fill="white" stroke="#333" stroke-width="2" />
+
+        @for (int i = 0; i < 60; i++)
+        {
+            var angle = i * 6;
+            var isHour = i % 5 == 0;
+            var r1 = isHour ? 82 : 88;
+            var r2 = 95;
+
+            <line x1="100"
+                  y1="@r1.ToString(CultureInfo.InvariantCulture)"
+                  x2="100"
+                  y2="@r2.ToString(CultureInfo.InvariantCulture)"
+                  stroke="@(isHour ? "#000" : "#999")"
+                  stroke-width="@(isHour ? 2 : 1)"
+                  transform="rotate(@angle.ToString(CultureInfo.InvariantCulture), 100, 100)" />
+
+            if (isHour)
+            {
+                var hourNum = i == 0 ? 12 : i / 5;
+
+                @((MarkupString)$@"
+                <text x='100'
+                      y='28'
+                      font-size='12'
+                      text-anchor='middle'
+                      dominant-baseline='central'
+                      font-weight='bold'
+                      fill='#333'
+                      transform='rotate({angle.ToString(CultureInfo.InvariantCulture)}, 100, 100) rotate({(-angle).ToString(CultureInfo.InvariantCulture)}, 100, 28)'>
+                    {hourNum}
+                </text>")
+            }
+        }
+
+        <line x1="100" y1="100" x2="100" y2="55"
+              stroke="#333" stroke-width="5" stroke-linecap="round"
+              transform="rotate(@HourAngle.ToString(CultureInfo.InvariantCulture), 100, 100)" />
+
+        <line x1="100" y1="100" x2="100" y2="30"
+              stroke="#666" stroke-width="3" stroke-linecap="round"
+              transform="rotate(@MinuteAngle.ToString(CultureInfo.InvariantCulture), 100, 100)" />
+
+        <line x1="100" y1="100" x2="100" y2="15"
+              stroke="#e74c3c" stroke-width="1.5" stroke-linecap="round"
+              transform="rotate(@SecondAngle.ToString(CultureInfo.InvariantCulture), 100, 100)" />
+
+        <circle cx="100" cy="100" r="4" fill="#333" />
+        <circle cx="100" cy="100" r="2" fill="#e74c3c" />
+    </svg>
+
+    <div class="digital-display">
+        @CurrentTime.ToString("HH:mm:ss")
+    </div>
+</div>
+
+@code {
+    private DateTime CurrentTime = DateTime.Now;
+    private CancellationTokenSource _cts = new();
+
+    private double SecondAngle => CurrentTime.Second * 6;
+    private double MinuteAngle => CurrentTime.Minute * 6 + CurrentTime.Second * 0.1;
+    private double HourAngle => (CurrentTime.Hour % 12) * 30 + CurrentTime.Minute * 0.5;
+
+    protected override void OnInitialized()
+    {
+        _ = TickClock();
+    }
+
+    private async Task TickClock()
+    {
+        while (!_cts.Token.IsCancellationRequested)
+        {
+            CurrentTime = DateTime.Now;
+            await InvokeAsync(StateHasChanged);
+
+            try
+            {
+                await Task.Delay(1000, _cts.Token);
+            }
+            catch (TaskCanceledException)
+            {
+                break;
+            }
+        }
+    }
+
+    public void Dispose()
+    {
+        _cts.Cancel();
+        _cts.Dispose();
+    }
+}
+.clock-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-top: 40px;
+}
+
+.analog-clock {
+width: 400px;
+height: 400px;
+max-width: 90vw;
+}
+
+.digital-display {
+margin-top: 20px;
+font-size: 28px;
+font-weight: bold;
+font-family: monospace;
+}
