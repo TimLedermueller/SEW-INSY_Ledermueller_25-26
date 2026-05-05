@@ -118,3 +118,96 @@ db.emps.aggregate([
 ]);
 //20
 db.emps.destinct("JOB").length;
+
+
+// 21
+db.emps.aggregate([
+  { $match: { MGR: { $ne: null } } },
+  { $group: { _id: "$MGR" } },
+  { $count: "Anzahl_unterschiedlicher_Manager" }
+]);
+
+// 22
+db.emps.aggregate([
+  { $match: { dept_id: 30 } },
+  {
+    $group: {
+      _id: null,
+      SUM: {
+        $sum: { $add: ["$SAL", { $ifNull: ["$COMM", 0] }] }
+      },
+      AVG: {
+        $avg: { $add: ["$SAL", { $ifNull: ["$COMM", 0] }] }
+      },
+      COUNT: { $sum: 1 }
+    }
+  }
+]);
+
+// 23
+db.emps.aggregate([
+  { $match: { JOB: { $nin: ["MANAGER", "PRESIDENT"] } } },
+  {
+    $group: {
+      _id: "$dept_id",
+      Berufe: { $addToSet: "$JOB" }
+    }
+  },
+  {
+    $project: {
+      _id: 1,
+      AnzahlBerufe: { $size: "$Berufe" },
+      Berufe: 1
+    }
+  }
+]);
+
+// 24
+db.emps.aggregate([
+  {
+    $group: {
+      _id: "$dept_id",
+      AnzahlMitarbeiter: { $sum: 1 }
+    }
+  },
+  {
+    $group: {
+      _id: null,
+      DurchschnittMitarbeiterProFiliale: {
+        $avg: "$AnzahlMitarbeiter"
+      }
+    }
+  }
+]);
+
+// 25
+db.emps.find({
+  JOB: { $in: ["MANAGER", "PRESIDENT"] }
+});
+
+// 26
+db.emps.find(
+  {
+    $expr: {
+      $gt: ["$COMM", { $multiply: ["$SAL", 0.25] }]
+    }
+  },
+  { ENAME: 1, JOB: 1, COMM: 1, _id: 0 }
+);
+
+// 27
+db.emps.aggregate([
+  {
+    $project: {
+      Einkommen: {
+        $add: ["$SAL", { $ifNull: ["$COMM", 0] }]
+      }
+    }
+  },
+  {
+    $group: {
+      _id: null,
+      GeringstesEinkommen: { $min: "$Einkommen" }
+    }
+  }
+]);
