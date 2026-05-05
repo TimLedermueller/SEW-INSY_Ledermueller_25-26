@@ -116,4 +116,5 @@ db.emps.aggregate([
     }
   }
 ]);
-
+//20
+db.emps.destinct("JOB").length;
