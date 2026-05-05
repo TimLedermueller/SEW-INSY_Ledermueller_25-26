@@ -215,3 +215,15 @@ db.emps.aggregate([
 
 
 db.emps.find().sort({ HIREDATE: 1 }).limit(1);
+
+
+//29
+
+db.emps.aggregate([
+  {
+    $group: {
+      _id: { Filiale: "$dept_id", Job: "$JOB" },
+      Anzahl: { $sum: 1 }
+    }
+  }
+]);
