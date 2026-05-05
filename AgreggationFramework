@@ -211,3 +211,7 @@ db.emps.aggregate([
     }
   }
 ]);
+//28
+
+
+db.emps.find().sort({ HIREDATE: 1 }).limit(1);
