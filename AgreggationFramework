@@ -227,3 +227,62 @@ db.emps.aggregate([
     }
   }
 ]);
+
+
+// 30
+db.emps.aggregate([
+  {
+    $project: {
+      dept_id: 1,
+      Einkommen: {
+        $add: ["$SAL", { $ifNull: ["$COMM", 0] }]
+      }
+    }
+  },
+  {
+    $group: {
+      _id: "$dept_id",
+      HoechstesEinkommen: { $max: "$Einkommen" },
+      NiedrigstesEinkommen: { $min: "$Einkommen" }
+    }
+  }
+]);
+
+// 31
+// COMM = 0 bedeutet: Provision ist vorhanden, aber beträgt 0.
+// COMM = null bedeutet: keine Provision eingetragen.
+
+// 32
+db.emps.aggregate([
+  {
+    $group: {
+      _id: null,
+      COUNT_MGR: {
+        $sum: { $cond: [{ $ne: ["$MGR", null] }, 1, 0] }
+      },
+      DISTINCT_MGR: {
+        $addToSet: "$MGR"
+      }
+    }
+  },
+  {
+    $project: {
+      _id: 0,
+      COUNT_MGR: 1,
+      COUNT_DISTINCT_MGR: {
+        $size: {
+          $filter: {
+            input: "$DISTINCT_MGR",
+            as: "mgr",
+            cond: { $ne: ["$$mgr", null] }
+          }
+        }
+      }
+    }
+  }
+]);
+
+// 33
+// MongoDB-Gruppenfunktionen sind z. B.:
+// $sum, $avg, $min, $max, $count, $push, $addToSet
+// Sie werden meistens in $group verwendet.
