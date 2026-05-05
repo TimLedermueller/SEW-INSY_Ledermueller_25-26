@@ -81,3 +81,39 @@ db.emps.aggregate([
 ])
 // 16
 db.emps.aggregate([{ $project: {"Monatsgehalt": "$SAL", "Tagesgehalt": {$divide: ["$SAL", 22]}, "Stundengehalt": {$divide: ["$SAL", 173.36]}, "_id": 0}}])
+
+
+//17
+db.emps.aggregate([
+  { $group: { _id: null, total: { $sum: "$SAL" } } }
+]);
+
+//18
+db.emps.aggregate([
+  {
+    $project: {
+      COMM: { $ifNull: ["$COMM", 250] }
+    }
+  },
+  {
+    $group: {
+      _id: null,
+      avgComm: { $avg: "$COMM" }
+    }
+  }
+]);
+
+
+//19
+
+db.emps.aggregate([
+  { $match: { dept_id: 30 } },
+  {
+    $group: {
+      _id: null,
+      gehalt: { $sum: { $cond: [{ $eq: ["$COMM", null] }, 1, 0] } },
+      provision: { $sum: { $cond: [{ $ne: ["$COMM", null] }, 1, 0] } }
+    }
+  }
+]);
+
