@@ -286,3 +286,31 @@ db.emps.aggregate([
 // MongoDB-Gruppenfunktionen sind z. B.:
 // $sum, $avg, $min, $max, $count, $push, $addToSet
 // Sie werden meistens in $group verwendet.
+
+
+//34
+db.emps.aggregate([
+  { $match: { dept_id: 30 } },
+  {
+    $group: {
+      _id: null,
+      MIN: { $min: { $add: ["$SAL", { $ifNull: ["$COMM", 0] }] } },
+      MAX: { $max: { $add: ["$SAL", { $ifNull: ["$COMM", 0] }] } },
+      AVG: { $avg: { $add: ["$SAL", { $ifNull: ["$COMM", 0] }] } },
+      COUNT: { $sum: 1 }
+    }
+  }
+]);
+
+
+//35 
+db.emps.aggregate([
+  {
+    $group: {
+      _id: "$dept_id",
+      MIN: { $min: "$SAL" },
+      MAX: { $max: "$SAL" },
+      AVG: { $avg: "$SAL" }
+    }
+  }
+]);
