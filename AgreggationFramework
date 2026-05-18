@@ -314,3 +314,290 @@ db.emps.aggregate([
     }
   }
 ]);
+
+// 36
+db.emps.aggregate([
+  {
+    $match: {
+      JOB: { $nin: ["MANAGER", "PRESIDENT"] }
+    }
+  },
+  {
+    $group: {
+      _id: "$dept_id",
+      MIN: { $min: "$SAL" },
+      MAX: { $max: "$SAL" },
+      AVG: { $avg: "$SAL" },
+      COUNT: { $sum: 1 }
+    }
+  }
+]);
+
+// 37
+db.emps.aggregate([
+  {
+    $match: {
+      COMM: null
+    }
+  },
+  {
+    $group: {
+      _id: "$JOB",
+      Durchschnittsgehalt: { $avg: "$SAL" }
+    }
+  }
+]);
+
+// 38
+db.emps.aggregate([
+  {
+    $project: {
+      dept_id: 1,
+      Jahreszahlung: {
+        $multiply: [
+          {
+            $add: [
+              "$SAL",
+              { $ifNull: ["$COMM", 100] }
+            ]
+          },
+          12
+        ]
+      }
+    }
+  },
+  {
+    $group: {
+      _id: "$dept_id",
+      GesamtJahreszahlung: {
+        $sum: "$Jahreszahlung"
+      }
+    }
+  }
+]);
+
+// 39
+// Geschachtelte Funktionen werden von innen nach außen ausgewertet.
+
+// 40
+db.emps.aggregate([
+  {
+    $group: {
+      _id: "$JOB",
+      Durchschnittsgehalt: { $avg: "$SAL" }
+    }
+  },
+  {
+    $match: {
+      Durchschnittsgehalt: { $gt: 1500 }
+    }
+  },
+  {
+    $sort: {
+      Durchschnittsgehalt: 1
+    }
+  }
+]);
+
+// 41
+db.emps.aggregate([
+  {
+    $match: {
+      JOB: "CLERK"
+    }
+  },
+  {
+    $group: {
+      _id: "$dept_id",
+      Anzahl: { $sum: 1 }
+    }
+  },
+  {
+    $match: {
+      Anzahl: { $gte: 2 }
+    }
+  }
+]);
+
+// 42
+// WHERE filtert Datensätze vor GROUP BY.
+// HAVING filtert Gruppen nach GROUP BY.
+
+// 43
+db.emps.aggregate([
+  {
+    $group: {
+      _id: "$JOB",
+      Durchschnittsgehalt: { $avg: "$SAL" }
+    }
+  },
+  {
+    $match: {
+      Durchschnittsgehalt: { $gt: 1500 }
+    }
+  },
+  {
+    $sort: {
+      _id: 1
+    }
+  }
+]);
+
+// 44
+// Reihenfolge:
+// 1. WHERE
+// 2. GROUP BY
+// 3. HAVING
+// 4. ORDER BY
+
+// 45
+// WHERE ist schneller,
+// weil bereits vor der Gruppierung gefiltert wird.
+
+// 46
+db.emps.find({
+  SAL: {
+    $gt: db.emps.findOne({ ENAME: "JONES" }).SAL
+  }
+});
+
+// 47
+db.emps.aggregate([
+  {
+    $lookup: {
+      from: "emps",
+      localField: "MGR",
+      foreignField: "EMPNO",
+      as: "chef"
+    }
+  },
+  {
+    $unwind: "$chef"
+  },
+  {
+    $match: {
+      $expr: {
+        $gt: ["$SAL", "$chef.SAL"]
+      }
+    }
+  },
+  {
+    $project: {
+      _id: 0,
+      Mitarbeiter: "$ENAME",
+      MitarbeiterGehalt: "$SAL",
+      Chef: "$chef.ENAME",
+      ChefGehalt: "$chef.SAL"
+    }
+  }
+]);
+
+// 48
+db.emps.find({
+  SAL: {
+    $lt: (
+      db.emps.findOne({ JOB: "PRESIDENT" }).SAL * 0.3
+    )
+  }
+});
+
+// 49
+db.depts.aggregate([
+  {
+    $lookup: {
+      from: "emps",
+      localField: "dept_id",
+      foreignField: "dept_id",
+      as: "mitarbeiter"
+    }
+  },
+  {
+    $match: {
+      mitarbeiter: { $size: 0 }
+    }
+  }
+]);
+
+// 50
+db.emps.find({
+  JOB: db.emps.findOne({ ENAME: "JONES" }).JOB
+});
+
+// 51
+db.emps.find(
+  {},
+  {
+    ENAME: 1,
+    JOB: 1,
+    SAL: 1,
+    _id: 0
+  }
+).sort({ SAL: -1 }).limit(1);
+
+// 52
+db.emps.aggregate([
+  {
+    $project: {
+      ENAME: 1,
+      Laenge: { $strLenCP: "$ENAME" }
+    }
+  },
+  {
+    $sort: {
+      Laenge: -1
+    }
+  },
+  {
+    $limit: 1
+  }
+]);
+
+// 53
+db.emps.aggregate([
+  {
+    $lookup: {
+      from: "depts",
+      localField: "dept_id",
+      foreignField: "dept_id",
+      as: "dept"
+    }
+  },
+  {
+    $unwind: "$dept"
+  },
+  {
+    $match: {
+      "dept.LOC": "NEW YORK"
+    }
+  },
+  {
+    $count: "Anzahl"
+  }
+]);
+
+// 54
+db.emps.aggregate([
+  {
+    $lookup: {
+      from: "depts",
+      localField: "dept_id",
+      foreignField: "dept_id",
+      as: "dept"
+    }
+  },
+  {
+    $unwind: "$dept"
+  },
+  {
+    $match: {
+      "dept.LOC": "NEW YORK"
+    }
+  },
+  {
+    $project: {
+      _id: 0,
+      ENAME: 1
+    }
+  }
+]);
+
