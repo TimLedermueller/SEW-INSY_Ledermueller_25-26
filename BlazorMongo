@@ -1,0 +1,179 @@
+MongoBlazor: 
+
+
+Ein Inputselect: 
+
+<InputSelect ValueExpression="@(() => SelectedCollection)"
+             Value="@SelectedCollection"
+             ValueChanged="@((string s) => OnChanged.InvokeAsync(s))">
+    <option value="">-- auswählen --</option>
+    @if (CollectionNames != null)
+    {
+        @foreach (var name in CollectionNames)
+        {
+            <option value="@name">@name</option>
+        }
+    }
+</InputSelect>
+
+@code {
+    [Parameter] public string? SelectedCollection { get; set; }
+    [Parameter] public List<string>? CollectionNames { get; set; }
+    [Parameter] public EventCallback<string> OnChanged { get; set; }
+}
+
+Select Database: 
+
+<InputSelect ValueExpression="@(() => SelectedDatabase)"
+             Value="@SelectedDatabase"
+             ValueChanged="@((string s) => OnChanged.InvokeAsync(s))">
+    @if (DatabaseNames != null)
+    {
+        @foreach (var name in DatabaseNames)
+        {
+            <option value="@name">@name</option>
+        }
+    }
+</InputSelect>
+
+@code {
+    [Parameter] public string? SelectedDatabase { get; set; }
+    [Parameter] public List<string>? DatabaseNames { get; set; }
+    [Parameter] public EventCallback<string> OnChanged { get; set; }
+}
+
+
+
+
+Blazor.page
+
+
+
+@page "/mongodb"
+@using MongoDB.Driver
+@using Microsoft.AspNetCore.Components
+@using Microsoft.AspNetCore.Components.Web
+@rendermode InteractiveServer
+@using BlazorMongo.Components.SelectComponent
+@using MongoDB.Bson
+
+<PageTitle>Mongo</PageTitle>
+
+@if (databaseNames == null)
+{
+    <p>
+        <em>Loading...</em>
+    </p>
+}
+else
+{
+    <EditForm Model="this">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Database Name</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <SelectDatabaseComponent
+                        DatabaseNames="@databaseNames"
+                        SelectedDatabase="@selectedDatabase"
+                        OnChanged="OnDBChanged"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <SelectCollectionComponent 
+                        CollectionNames="@collectionNames" 
+                        SelectedCollection="@selectedCollection" 
+                        OnChanged="OnCollectionChanged" />
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </EditForm>
+    
+    <h3>Selected Collection</h3>
+    <table>
+        <tbody>
+        @foreach (var doc in documents)
+        {
+            <tr>
+                <td>
+                    <pre>@doc.ToString()</pre>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<string>? databaseNames;
+    private List<string>? collectionNames = new();
+    private string selectedDatabase;
+    private string selectedCollection;
+    private MongoClient client = new MongoDB.Driver.MongoClient("mongodb://localhost:27017");
+    private List<BsonDocument> documents = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await ListDatabasesAsync();
+    }
+
+    public async Task OnDBChanged(string value)
+    {
+        selectedDatabase = value;
+        selectedCollection = null;
+        documents.Clear();
+        
+        await ListCollectionAsync(selectedDatabase);
+        StateHasChanged();
+    }
+    
+    public async Task OnCollectionChanged(string value)
+    {
+        selectedCollection = value;
+        documents.Clear();
+        if (!string.IsNullOrEmpty(selectedDatabase) && !string.IsNullOrEmpty(selectedCollection))
+        {
+            await LoadDocumentsAsync();
+        }
+        StateHasChanged(); 
+    }
+    
+    public async Task ListDatabasesAsync()
+    {
+        using (var cursor = await client.ListDatabasesAsync())
+        {
+            var dbs = await cursor.ToListAsync();
+            databaseNames = dbs.Select(db => db["name"].ToString()).ToList();
+            
+            foreach (var name in databaseNames)
+            {
+                Console.WriteLine(name);
+            }
+        }
+    }
+    
+    public async Task ListCollectionAsync(string dbName)
+    {
+        var database = client.GetDatabase(dbName);
+        using (var cursor = await database.ListCollectionNamesAsync())
+        {
+            collectionNames = await cursor.ToListAsync();
+        }
+    }
+    
+    private async Task LoadDocumentsAsync()
+    {
+        var database = client.GetDatabase(selectedDatabase);
+        var collection = database.GetCollection<BsonDocument>(selectedCollection);
+        
+        documents = await collection.Find(new BsonDocument()).Limit(100).ToListAsync();
+    }
+}
+
+
