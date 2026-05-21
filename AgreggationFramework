@@ -605,3 +605,92 @@ db.emps.aggregate([
 ]);
 
 
+
+
+// 53 Varianten
+
+db.emps.aggregate([
+{
+  $lookup:{
+    from:"depts",
+    localField:"dept_id",
+    foreignField:"DEPTNO",
+    as:"result"
+  }
+},
+{
+  $unwind:"$result"
+},
+{
+  $match:{
+    "result.LOC":"NEW YORK"
+  }
+},
+{
+  $count:"sovuesaninNY"
+}
+]);
+
+//53
+db.emps.aggregate([
+{
+  $lookup:{
+    from:"depts",
+    localField:"dept_id",
+    foreignField:"DEPTNO",
+    pipeline:[
+      {
+        $match:{ LOC:"NEW YORK" }
+      }
+    ],
+    as:"result"
+  }
+},
+{
+  $unwind:"$result"
+},
+{
+  $count:"sovuesaninNY"
+}
+]);
+
+
+//53
+
+db.emps2.aggregate([
+{
+  $match:{
+    "department.LOC":"NEW YORK"
+  }
+},
+{
+  $count:"sovuesaninNY"
+}
+]);
+
+
+//53
+
+
+db.depts2.aggregate([
+{
+  $match:{
+    LOC:"NEW YORK"
+  }
+},
+{
+  $addFields:{
+    sovuesaninNY:{
+      $size:"$employees"
+    }
+  }
+},
+{
+  $project:{
+    sovuesaninNY:1,
+    _id:0
+  }
+}
+]);
+
+
