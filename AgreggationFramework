@@ -32,53 +32,100 @@ db.emps.find({ dept_id: 10 }, { ENAME: 1, JOB: 1, HIREDATE: 1, _id: 0 });
 //3
 db.emps.find({ JOB: "CLERK" }, { ENAME: 1, JOB: 1, SAL: 1, _id: 0 });
 
+Sucht Beruf Cleark, Dabei ENAME, Job und Hiredate, id 0: blendet automatisch Mongo Id aus.
 
 //4
 
 // 4
 db.emps.find({ dept_id: { $ne: 10 } });
 
+ne bedeutet not equal
+
 // 5
 db.emps.find({ $expr: { $gt: ["$COMM", "$SAL"] } });
 
+$expre erlaubt vergleich und gt bedeutet größer als. Provision größer als gehalt
 
 // 6
 db.emps.find({ HIREDATE: ISODate("1981-12-03T00:00:00.000Z") });
+
+Hieradte genau datum..
+Datum muss als ISODATE angegben werden
+
 
 //7
 
 // 7
 db.emps.find({ $or: [{ SAL: { $lt: 1250 } }, { SAL: { $gt: 1600 } }] }, { ENAME: 1, SAL: 1, _id: 0 });
 
+Mitarbeiter deren gehalt kleiner ist als 1250
+Oder größer ist als 1600 
+
+
 // 8
 db.emps.find({ JOB: { $nin: ["MANAGER", "PRESIDENT"] } });
 
+Mitarbeiter, die weder Manger noch President sind
+
 // 9
 db.emps.find({ ENAME: { $regex: /^.{2}A/i } }, { ENAME: 1, _id: 0 });
+// Hier kommt an 3 stelle ein a ist. 
+// Sucht alle Namen, bei denen an dritter Stelle ein A steht.
+// ^ = Anfang des Namens
+// .{2} = zwei beliebige Zeichen
+// A = danach kommt A
+// i = Groß-/Kleinschreibung ignorieren
+
 
 // 10
 db.emps.find({ COMM: { $ne: null } }, { EMPNO: 1, ENAME: 1, JOB: 1, _id: 0 });
+// alle mitarbeitr mit Provison Comm ne als not nul
+
 
 // 11
 db.emps.find({}, { ENAME: 1, COMM: 1, _id: 0 }).sort({ COMM: -1 });
+mitarbeitr mit Provison 
+Dananch Comm absteigend srtiert .sort Comm -1
+
+
+
 // 12
 db.emps.find({ JOB: { $nin: ["MANAGER", "PRESIDENT"] } }, { ENAME: 1, dept_id: 1, HIREDATE: 1, _id: 0 }).sort({ dept_id: 1, HIREDATE: -1 });
+// Sucht alle Mitarbeiter, die keine Führungskräfte sind.
+// Also nicht MANAGER und nicht PRESIDENT.
+// Dann wird zuerst nach Filiale aufsteigend sortiert,
+// und innerhalb der Filiale nach HIREDATE absteigend.
 
 // 13
 db.emps.find({ $expr: { $eq: [ { $strLenCP: "$ENAME" }, 6 ] } }, { ENAME: 1, _id: 0 });
+// Sucht alle Mitarbeiter, deren Name genau 6 Zeichen lang ist.
+// $strLenCP zählt die Zeichen des Namens.
+// $expr erlaubt diese Berechnung im Filter.
+
 
 // 14
 db.emps.aggregate([{ $match: { dept_id: 30 } }, { $project: { _id: 0, Info: { $concat: ["$ENAME", " - ", "$JOB"] } } }]);
+// aggregate wird verwendet, weil ein neues Ausgabefeld gebaut wird.
+// $match filtert zuerst auf Filiale 30.
+// $project erzeugt das Feld Info.
+// $concat verbindet ENAME, " - " und JOB zu einem Text.
+
 
 // 15
 db.emps.aggregate([
 {$project:{"SAL+COMM":{$add:["$SAL", "$COMM"]}, "_id":0}}])
+berechnet Sall+Comm mit add ...
+Wenn Comm null wird ist Ergebnis auch null 
 
+
+15b
 db.emps.aggregate([
 {
     $project: {"SAL+ifnull(COMM,0)":{$add:["$SAL", {$ifNull: ["$COMM", 0]}]}, "_id":0}
     }
 ])
+Macht wieder Sall + Comm aber macht mit Ifnull wenn comm 0 mit o ersetzen Dadurch ist die Addition immer möglich im gegensatz zu 15
+
 // 16
 db.emps.aggregate([{ $project: {"Monatsgehalt": "$SAL", "Tagesgehalt": {$divide: ["$SAL", 22]}, "Stundengehalt": {$divide: ["$SAL", 173.36]}, "_id": 0}}])
 
@@ -87,6 +134,9 @@ db.emps.aggregate([{ $project: {"Monatsgehalt": "$SAL", "Tagesgehalt": {$divide:
 db.emps.aggregate([
   { $group: { _id: null, total: { $sum: "$SAL" } } }
 ]);
+//Summe aller Gehälter
+
+
 
 //18
 db.emps.aggregate([
@@ -103,6 +153,7 @@ db.emps.aggregate([
   }
 ]);
 
+Berechnet die Durchschnittliche Provision. Comm wir ersetzt duch 250 wenn null. Danach wir das avg berechent
 
 //19
 
@@ -116,9 +167,13 @@ db.emps.aggregate([
     }
   }
 ]);
-//20
-db.emps.destinct("JOB").length;
+Wenn Comm gleich null ist dann wird 1 zurückgegeben
 
+//20
+// Gibt die Anzahl unterschiedlicher Jobs aus.
+db.emps.distinct("JOB").length;
+distinct gib nur einzigartige werte
+length zält dann die anzahl dieser elemente
 
 // 21
 db.emps.aggregate([
@@ -126,6 +181,9 @@ db.emps.aggregate([
   { $group: { _id: "$MGR" } },
   { $count: "Anzahl_unterschiedlicher_Manager" }
 ]);
+
+//match: mongo filter Dokumente ne, also Mrg not null
+group: nach Mgr_id
 
 // 22
 db.emps.aggregate([
@@ -143,6 +201,11 @@ db.emps.aggregate([
     }
   }
 ]);
+nur filiale 30
+Gruop: Alle Mitarbeiter id null = > trotzdem all in einzige Gruppe
+Einkommen berechnen
+Count zählt die Mitarbeiter
+
 
 // 23
 db.emps.aggregate([
