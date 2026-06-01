@@ -341,6 +341,19 @@ db.emps.aggregate([
 // COMM = null bedeutet: keine Provision eingetragen.
 
 // 32
+
+Sinn: COUNT(MGR) Wie viele Mitarbeiter haben einen Manager?
+Count destinct: Wie viele verschiedene Managergibt es.
+Alle mitarbeiter werden in eine Gruppe gepackt
+Mitarbeiter pro Manager gezählt: Wenn MGR != null → zähle 1
+sonst → zähle 0
+$addToSet sammelt alle unterschiedlichen Managerwerte nur einmal.
+// $size zählt die Elemente eines Arrays.
+input: nimmt vorhandenes array.
+project: übernimmt werte unverändert.
+  // $ne bedeutet "ungleich".
+          // Prüft ob das aktuelle Element nicht null ist.
+
 db.emps.aggregate([
   {
     $group: {
