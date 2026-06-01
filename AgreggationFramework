@@ -260,6 +260,9 @@ db.emps.find({
 });
 
 // 26
+Hier braucht man $expr, weil zwei Werte miteinander verglichen werden, wobei einer davon berechnet wird.
+Also Comm > also (SAL*o,25) 
+Dann werden NAme job und Provison angezeigt.
 db.emps.find(
   {
     $expr: {
@@ -270,6 +273,9 @@ db.emps.find(
 );
 
 // 27
+Es wird das einkommen berechnet,wenn Comm null ist wir 0 verwendet um es rechnen zu können
+gruope: gibt alle in eine gruppe. id: null
+Berechnung min einkommen durch min Einkommen
 db.emps.aggregate([
   {
     $project: {
@@ -286,7 +292,10 @@ db.emps.aggregate([
   }
 ]);
 //28
-
+ltesten Mitarbeiter finden, also den mit dem frühesten Eintrittsdatum.
+find() holt alle Mitarbeiter.
+sortiert: nach Eintrittsdatum aufsteigend.
+limit(1): gibt den ersten Datensatz aus.
 
 db.emps.find().sort({ HIREDATE: 1 }).limit(1);
 
