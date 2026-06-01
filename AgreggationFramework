@@ -208,6 +208,10 @@ Count zählt die Mitarbeiter
 
 
 // 23
+match: JON not in(also kein MANAGER und PRESIDENT)
+gruppe: alle mit gleicher dept id kommen in eine gruppe
+addToSet sammelt Berufe: aber nur einmal pro Filliale.
+$size zählt, wie viele Elemente im Array Berufe sind.
 db.emps.aggregate([
   { $match: { JOB: { $nin: ["MANAGER", "PRESIDENT"] } } },
   {
