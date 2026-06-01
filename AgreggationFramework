@@ -301,7 +301,9 @@ db.emps.find().sort({ HIREDATE: 1 }).limit(1);
 
 
 //29
-
+Pro Filiale und pro Job zählen, wie viele Mitarbeiter es gibt.
+Hier wird nach einer Kombination gruppiert: Filiale 10 + CLERK
+Anzahl: wie viele Mitarbeiter in jeder Kombination sind.
 db.emps.aggregate([
   {
     $group: {
@@ -313,6 +315,9 @@ db.emps.aggregate([
 
 
 // 30
+Project: berechnen einkommen add Sal + comm (0)
+group: nach Fiialen
+Inerhalb filiale sucht Mongo min, max einkommen
 db.emps.aggregate([
   {
     $project: {
