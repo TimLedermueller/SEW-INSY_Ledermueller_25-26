@@ -390,6 +390,19 @@ db.emps.aggregate([
 
 
 //34
+ $match filtert zuerst nur die Mitarbeiter aus Filiale 30.
+id null: alle Mitarbeiter in eine gruppe.
+ // $ifNull ersetzt COMM durch 0, falls COMM null ist.
+ MIN: { $min: { $add: ["$SAL", { $ifNull: ["$COMM", 0] }] } },
+  // MAX berechnet das größte Einkommen.
+  MAX: { $max: { $add: ["$SAL", { $ifNull: ["$COMM", 0] }] } },
+  // AVG berechnet den Durchschnitt der Einkommen.
+  AVG: { $avg: { $add: ["$SAL", { $ifNull: ["$COMM", 0] }] } },
+  // COUNT zählt die Mitarbeiter.
+  // $sum:1 bedeutet: pro Mitarbeiter wird 1 addiert.
+  COUNT: { $sum: 1 }
+
+
 db.emps.aggregate([
   { $match: { dept_id: 30 } },
   {
@@ -405,6 +418,7 @@ db.emps.aggregate([
 
 
 //35 
+Groupe alle Filialen zusammen und dan minmy, avg von SAL
 db.emps.aggregate([
   {
     $group: {
@@ -435,6 +449,11 @@ db.emps.aggregate([
 ]);
 
 // 37
+Match: nur mitarbeiter wo comm null ist
+ COMM:null bedeutet: keine Provision eingetragen.
+// $group gruppiert die übrigen Mitarbeiter nach Beruf.
+// _id:"$JOB" bedeutet: jeder Beruf wird eine eigene Gruppe.
+ // $avg berechnet das durchschnittliche Gehalt pro Beruf.
 db.emps.aggregate([
   {
     $match: {
