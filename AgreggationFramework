@@ -474,6 +474,10 @@ db.emps.aggregate([
 ]);
 
 // 38
+projekt: neues Feld berechnen. 
+diept_id: 1: Filiale übernhemen.
+mulitiply: zuerst mit add dann sall +Com(wenn der null ist dann 0 statt null damit man damit rechnen kann dann wird dass mal 12 gerehnet.
+dann gruppierrt nach filiale und dann addiert alle Jahrestzahlungen.
 db.emps.aggregate([
   {
     $project: {
