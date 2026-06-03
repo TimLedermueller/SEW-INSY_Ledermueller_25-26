@@ -418,6 +418,9 @@ db.emps.aggregate([
 
 
 //35 
+groupe: Nach filialie
+_id: nach Filialiennummer
+Min, max, Avg gehalt nach filialie
 Groupe alle Filialen zusammen und dan minmy, avg von SAL
 db.emps.aggregate([
   {
