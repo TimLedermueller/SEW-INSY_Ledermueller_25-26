@@ -434,6 +434,8 @@ db.emps.aggregate([
 ]);
 
 // 36
+matc: filtert zuerst die Mitarbeiter: JOB => nin (not in)
+Gruppe: nach filiale, min, max, avg sal und dann zählen wir noch die Mitarbeiter.
 db.emps.aggregate([
   {
     $match: {
