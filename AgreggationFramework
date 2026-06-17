@@ -528,10 +528,13 @@ db.emps.aggregate([
   }
 ]);
 
+//41
+//$match vor $group → nur CLERKs
+//$group → nach Filiale gruppieren
+//$sum:1 → CLERKs zählen
+//$match nach $group → nur Anzahl >= 2
+Angabe: Filialen mit mindestens 2 CLERKs.
 
-
-
-// 41
 db.emps.aggregate([
   {
     $match: {
@@ -587,6 +590,7 @@ db.emps.aggregate([
 // weil bereits vor der Gruppierung gefiltert wird.
 
 // 46
+//Finde alle Mitarbeiter, deren Gehalt (SAL) größer ist als das Gehalt von JONES.
 db.emps.find({
   SAL: {
     $gt: db.emps.findOne({ ENAME: "JONES" }).SAL
@@ -650,10 +654,73 @@ db.depts.aggregate([
   }
 ]);
 
-// 50
-db.emps.find({
-  JOB: db.emps.findOne({ ENAME: "JONES" }).JOB
-});
+
+// 50.1
+db.emps.find({ JOB: db.emps.findOne({ ENAME: "JONES" }).JOB, ENAME: { $ne: "JONES" } });
+
+// 50.2
+
+erklährung: Wichtiges:
+// Erklärung:
+
+// $lookup holt die Daten von JONES in jedes Dokument dazu.
+// from:"emps"
+// Es wird wieder in der Collection emps gesucht.
+// pipeline:[{$match:{ENAME:"JONES"}}]
+// Sucht nr den Mitarbeiter JONES.
+// as:"jones_info"
+// Die Daten von JONES werden im Feld jones_info gespeichert.
+// $unwind macht aus dem Array jones_info ein normales Objekt,
+// damit auf die Felder direkt zugegriffen werden kann.
+// $match filtert die Mitarbeiter.
+// $expr erlaubt Vergleiche zwischen Feldern.
+// $eq:["$JOB","$jones_info.JOB"]
+// Prüft, ob der Beruf des Mitarbeiters gleich dem Beruf von JONES ist.
+// $ne:["$ENAME","JONES"]
+// Schließt JONES selbst aus.
+// $and
+// Beide Bedingungen müssen gleichzeitig erfüllt sein.
+// $project bestimmt die Ausgabe.
+// Mitarbeiter:"$ENAME"
+// Gibt den Namen des Mitarbeiters aus.
+// Beruf:"$JOB"
+// Gibt den Beruf des Mitarbeiters aus.
+// Ergebnis:
+// Alle Mitarbeiter, die den gleichen Beruf wie JONES haben,
+// aber JONES selbst wird nicht angezeigt.bjekt.
+
+db.emps.aggregate([
+  {
+    $lookup: {
+      from: "emps",
+      pipeline: [
+        { $match: { ENAME: "JONES" } }
+      ],
+      as: "jones_info"
+    }
+  },
+  { $unwind: "$jones_info" },
+  {
+    $match: {
+      $expr: {
+        $and: [
+          { $eq: ["$JOB", "$jones_info.JOB"] },
+          { $ne: ["$ENAME", "JONES"] }
+        ]
+      }
+    }
+  },
+  {
+    $project: {
+      _id: 0,
+      Mitarbeiter: "$ENAME",
+      Beruf: "$JOB"
+    }
+  }
+]);
+
+
+
 
 // 51
 db.emps.find(
